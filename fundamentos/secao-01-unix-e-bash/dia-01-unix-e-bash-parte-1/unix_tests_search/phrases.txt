@@ -1,0 +1,5 @@
+Casa
+Apartamento
+Carro
+Pc
+Café
