@@ -1,29 +1,6 @@
-.div1:hover {
-    border-color: red;
-    border-style: solid;
-    border-width: 10px;
-}
-
-.div2:hover {
-    border-color: yellow;
-    border-style: solid;
-    border-width: 10px;
-}
-
-.div3:hover {
-    border-color: green;
-    border-style: solid;
-    border-width: 10px;
-}
-
-.div4:hover {
-    border-color: blue;
-    border-style: solid;
-    border-width: 10px;
-}
-
-.div5:hover {
-    border-color: pink;
-    border-style: solid;
-    border-width: 10px;
+div:hover {
+    background-color: aliceblue;
+    background-color: aqua;
+    background-color: red;
+    transition: unset;
 }
