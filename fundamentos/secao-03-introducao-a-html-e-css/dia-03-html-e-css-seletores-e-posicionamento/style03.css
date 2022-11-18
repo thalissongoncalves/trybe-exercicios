@@ -5,3 +5,7 @@ h1, p {
 ul:hover {
     background-color: grey;
 }
+
+li:active {
+    background-color: yellow;
+}
