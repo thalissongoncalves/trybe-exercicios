@@ -1,0 +1,15 @@
+h1, p {
+    text-align: center;
+}
+
+ul:hover {
+    background-color: grey;
+}
+
+li:active {
+    background-color: yellow;
+}
+
+ul, ol {
+    list-style: none;
+}
