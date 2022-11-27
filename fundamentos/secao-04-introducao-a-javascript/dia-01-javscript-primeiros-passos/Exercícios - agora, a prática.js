@@ -116,20 +116,34 @@
 
 // O código deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
-const nota = 1;
+// const nota = 1;
 
-if (nota < 0 || nota > 100) {
-    console.log("Nota inválida, insira uma nota de 0 a 100.");
-} else if (nota >= 90) {
-    console.log("A");
-} else if (nota >= 80) {
-    console.log("B");
-} else if (nota >= 70) {
-    console.log("C");
-} else if (nota >= 60) {
-    console.log("D");
-} else if (nota >= 50) {
-    console.log("E");
-} else {
-    console.log("F");
+// if (nota < 0 || nota > 100) {
+//     console.log("Nota inválida, insira uma nota de 0 a 100.");
+// } else if (nota >= 90) {
+//     console.log("A");
+// } else if (nota >= 80) {
+//     console.log("B");
+// } else if (nota >= 70) {
+//     console.log("C");
+// } else if (nota >= 60) {
+//     console.log("D");
+// } else if (nota >= 50) {
+//     console.log("E");
+// } else {
+//     console.log("F");
+// }
+
+// Exercício 08 - Utilize if/else para escrever um código que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele deve retornar false.
+// Bonus: use somente um if.
+
+const number1 = 13;
+const number2 = 15;
+const number3 = 12;
+
+let isEven = false;
+
+if(number1 % 2 === 0 || number2 % 2 === 0 || number3 % 2 === 0) {
+    isEven = true;
 }
+console.log(isEven);
