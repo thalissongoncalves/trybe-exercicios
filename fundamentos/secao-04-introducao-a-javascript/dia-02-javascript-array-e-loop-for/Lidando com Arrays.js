@@ -30,17 +30,45 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercício 04: Com base no código que acabou de gerar, faça com que, caso o valor final seja maior que 20, imprima a mensagem: “valor maior que 20”. Caso não seja, imprima a mensagem: “valor menor ou igual a 20”;
 
-let sum = 0;
+// let sum = 0;
+// for (let index = 0; index < numbers.length; index += 1) {
+//     sum += numbers[index];
+// }
+
+// let mediaAritmetica = sum / numbers.length;
+
+// console.log('Média aritmética dos valores contidos no array: ' + mediaAritmetica);
+
+// if (mediaAritmetica > 20) {
+//     console.log("Valor maior que 20.")
+// } else {
+//     console.log("Valor menor ou igual a 20.")
+// }
+
+//Exercício 05: Utilizando for, descubra qual o maior valor contido no array e imprima-o;
+
+// let biggerNumber = 0;
+
+// for (let index = 0; index < numbers.length; index += 1) {
+
+//     let number = numbers[index];
+
+//     if(number > biggerNumber) {
+//         biggerNumber = number;
+//     }
+// }
+
+// console.log(biggerNumber);
+
+//Exercício 06: Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
+
+let oddNumber = 0;
+
 for (let index = 0; index < numbers.length; index += 1) {
-    sum += numbers[index];
-}
 
-let mediaAritmetica = sum / numbers.length;
+    let number = numbers[index];
 
-console.log('Média aritmética dos valores contidos no array: ' + mediaAritmetica);
-
-if (mediaAritmetica > 20) {
-    console.log("Valor maior que 20.")
-} else {
-    console.log("Valor menor ou igual a 20.")
+    if (number % 2 !== 0) {
+        console.log(number);
+    }
 }
