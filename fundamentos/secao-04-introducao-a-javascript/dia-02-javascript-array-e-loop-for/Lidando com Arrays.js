@@ -90,10 +90,22 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercício 08: Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
 
+// let array2 = [];
+
+// for (let index = 1; index <= 25; index += 1) {
+//     array2.push(index);
+// }
+
+// console.log(array2);
+
+//Exercício 09: Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
+
 let array2 = [];
 
 for (let index = 1; index <= 25; index += 1) {
     array2.push(index);
 }
 
-console.log(array2);
+for (let index = 0; index < array2.length; index += 1) {
+    console.log(array2[index] / 2);
+}
