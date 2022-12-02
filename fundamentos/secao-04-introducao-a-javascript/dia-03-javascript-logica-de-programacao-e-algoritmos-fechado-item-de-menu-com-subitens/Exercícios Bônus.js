@@ -76,23 +76,54 @@
 //  ***
 // *****
 
-let size = 5;
+// let size = 5;
+// let inputLine = '';
+// let symbol = '*';
+// let midOfMatrix = (size + 1) / 2;
+// let controlLeft = midOfMatrix;
+// let controlRight = midOfMatrix;
+
+// for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
+//     for (let columnIndex = 0; columnIndex <= size; columnIndex += 1) {
+//         if (columnIndex > controlLeft && columnIndex < controlRight) {
+//             inputLine = inputLine + symbol;
+//         } else {
+//             inputLine = inputLine + ' ';
+//         }
+//     }
+//     console.log(inputLine);
+//     inputLine = '';
+//     controlRight += 1;
+//     controlLeft -= 1;
+// };
+
+// Exercício 05 - Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
+// Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+// n = 7
+
+//    *
+//   * *
+//  *   *
+// *******
+
+let size = 7;
 let inputLine = '';
 let symbol = '*';
 let midOfMatrix = (size + 1) / 2;
 let controlLeft = midOfMatrix;
 let controlRight = midOfMatrix;
 
-for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
-    for (let columnIndex = 0; columnIndex <= size; columnIndex += 1) {
-        if (columnIndex > controlLeft && columnIndex < controlRight) {
-            inputLine = inputLine + symbol;
+for (let lineIndex = 1; lineIndex <= midOfMatrix; lineIndex += 1) {
+    let outputLine = '';
+    for (let columnIndex = 1; columnIndex <= size; columnIndex += 1) {
+        if (columnIndex == controlLeft || columnIndex == controlRight || lineIndex == midOfMatrix) {
+            outputLine += symbol;
         } else {
-            inputLine = inputLine + ' ';
+            outputLine += ' ';
         }
     }
-    console.log(inputLine);
-    inputLine = '';
+    console.log(outputLine);
     controlRight += 1;
     controlLeft -= 1;
 };
