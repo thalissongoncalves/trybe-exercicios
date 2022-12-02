@@ -30,11 +30,40 @@
 // ****
 // *****
 
-let n = 5;
-let symbol = '*';
-let inputLine = '';
+// let n = 5;
+// let symbol = '*';
+// let inputLine = '';
 
-for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-    inputLine = inputLine + symbol;
+// for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
+//     inputLine = inputLine + symbol;
+//     console.log(inputLine);
+// };
+
+// Exercício 03 - Agora inverta o lado do triângulo. Por exemplo:
+
+// n = 5
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
+
+let size = 5;
+let inputLine = '';
+let symbol = '*';
+let inputPosition = size;
+
+
+for (let lineIndex = 0; lineIndex <= size; lineIndex += 1) {
+    for (let columnIndex = 0; columnIndex <= size; columnIndex += 1) {
+        if (columnIndex < inputPosition) {
+            inputLine = inputLine + ' ';
+        } else {
+            inputLine = inputLine + symbol;
+        }
+    }
     console.log(inputLine);
+    inputLine = '';
+    inputPosition -= 1;
 };
