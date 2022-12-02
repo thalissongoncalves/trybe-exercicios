@@ -49,21 +49,50 @@
 //  ****
 // *****
 
+// let size = 5;
+// let inputLine = '';
+// let symbol = '*';
+// let inputPosition = size;
+
+
+// for (let lineIndex = 0; lineIndex <= size; lineIndex += 1) {
+//     for (let columnIndex = 0; columnIndex <= size; columnIndex += 1) {
+//         if (columnIndex < inputPosition) {
+//             inputLine = inputLine + ' ';
+//         } else {
+//             inputLine = inputLine + symbol;
+//         }
+//     }
+//     console.log(inputLine);
+//     inputLine = '';
+//     inputPosition -= 1;
+// };
+
+// Exercício 04 - Depois, faça uma pirâmide com n asteriscos de base:
+
+// n = 5
+
+//   *
+//  ***
+// *****
+
 let size = 5;
 let inputLine = '';
 let symbol = '*';
-let inputPosition = size;
+let midOfMatrix = (size + 1) / 2;
+let controlLeft = midOfMatrix;
+let controlRight = midOfMatrix;
 
-
-for (let lineIndex = 0; lineIndex <= size; lineIndex += 1) {
+for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
     for (let columnIndex = 0; columnIndex <= size; columnIndex += 1) {
-        if (columnIndex < inputPosition) {
-            inputLine = inputLine + ' ';
-        } else {
+        if (columnIndex > controlLeft && columnIndex < controlRight) {
             inputLine = inputLine + symbol;
+        } else {
+            inputLine = inputLine + ' ';
         }
     }
     console.log(inputLine);
     inputLine = '';
-    inputPosition -= 1;
+    controlRight += 1;
+    controlLeft -= 1;
 };
