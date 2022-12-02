@@ -107,23 +107,39 @@
 //  *   *
 // *******
 
-let size = 7;
-let inputLine = '';
-let symbol = '*';
-let midOfMatrix = (size + 1) / 2;
-let controlLeft = midOfMatrix;
-let controlRight = midOfMatrix;
+// let size = 7;
+// let inputLine = '';
+// let symbol = '*';
+// let midOfMatrix = (size + 1) / 2;
+// let controlLeft = midOfMatrix;
+// let controlRight = midOfMatrix;
 
-for (let lineIndex = 1; lineIndex <= midOfMatrix; lineIndex += 1) {
-    let outputLine = '';
-    for (let columnIndex = 1; columnIndex <= size; columnIndex += 1) {
-        if (columnIndex == controlLeft || columnIndex == controlRight || lineIndex == midOfMatrix) {
-            outputLine += symbol;
-        } else {
-            outputLine += ' ';
-        }
-    }
-    console.log(outputLine);
-    controlRight += 1;
-    controlLeft -= 1;
-};
+// for (let lineIndex = 1; lineIndex <= midOfMatrix; lineIndex += 1) {
+//     let outputLine = '';
+//     for (let columnIndex = 1; columnIndex <= size; columnIndex += 1) {
+//         if (columnIndex == controlLeft || columnIndex == controlRight || lineIndex == midOfMatrix) {
+//             outputLine += symbol;
+//         } else {
+//             outputLine += ' ';
+//         }
+//     }
+//     console.log(outputLine);
+//     controlRight += 1;
+//     controlLeft -= 1;
+// };
+
+// Exercício 06 - Faça um programa que diz se um número definido numa variável é primo ou não.
+
+let divisors = 1;
+let numberToCheck = 4;
+
+for (let number = 2; number <= numberToCheck; number += 1) {
+    if (numberToCheck % number === 0) divisors += 1;
+}
+
+if (divisors === 2) {
+    console.log(numberToCheck + ' é primo');
+} 
+else { 
+    console.log(numberToCheck + ' não é primo');
+}
