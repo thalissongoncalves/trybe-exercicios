@@ -40,14 +40,28 @@
 // Exercício 02 - Faça um programa que retorne o maior de dois números. Defina, no começo do programa, duas constantes com os valores que serão comparados.
 
 
-function maiorNum(primeiroNum, segundoNum) {
-    if (primeiroNum > segundoNum) {
-        return primeiroNum + ' é maior que ' + segundoNum + '.';
-    } else if (a < b) {
-        return segundoNum + ' é maior que ' + primeiroNum + '.';
+// function maiorNum(primeiroNum, segundoNum) {
+//     if (primeiroNum > segundoNum) {
+//         return primeiroNum + ' é maior que ' + segundoNum + '.';
+//     } else if (a < b) {
+//         return segundoNum + ' é maior que ' + primeiroNum + '.';
+//     } else {
+//         return 'Os números são iguais';
+//     }
+// }
+
+// console.log(maiorNum(20, 10));
+
+// Exercício 03 - Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
+
+function maiorNum (primeiroNum, segundoNum, terceiroNum) {
+    if (primeiroNum > segundoNum && primeiroNum > terceiroNum) {
+        return primeiroNum + ' é maior que ' + segundoNum + ' e ' + terceiroNum + '.';
+    } else if (segundoNum > primeiroNum && segundoNum > terceiroNum) {
+        return segundoNum + ' é maior que ' + primeiroNum + ' e ' + terceiroNum + '.';
     } else {
-        return 'Os números são iguais';
+        return terceiroNum + ' é maior que ' + primeiroNum + ' e ' + segundoNum + '.';
     }
 }
 
-console.log(maiorNum(20, 10));
+console.log(maiorNum(20, 10, 22));
