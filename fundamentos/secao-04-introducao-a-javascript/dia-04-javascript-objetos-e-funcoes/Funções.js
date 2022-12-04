@@ -54,14 +54,28 @@
 
 // Exercício 03 - Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
 
-function maiorNum (primeiroNum, segundoNum, terceiroNum) {
-    if (primeiroNum > segundoNum && primeiroNum > terceiroNum) {
-        return primeiroNum + ' é maior que ' + segundoNum + ' e ' + terceiroNum + '.';
-    } else if (segundoNum > primeiroNum && segundoNum > terceiroNum) {
-        return segundoNum + ' é maior que ' + primeiroNum + ' e ' + terceiroNum + '.';
+// function maiorNum (primeiroNum, segundoNum, terceiroNum) {
+//     if (primeiroNum > segundoNum && primeiroNum > terceiroNum) {
+//         return primeiroNum + ' é maior que ' + segundoNum + ' e ' + terceiroNum + '.';
+//     } else if (segundoNum > primeiroNum && segundoNum > terceiroNum) {
+//         return segundoNum + ' é maior que ' + primeiroNum + ' e ' + terceiroNum + '.';
+//     } else {
+//         return terceiroNum + ' é maior que ' + primeiroNum + ' e ' + segundoNum + '.';
+//     }
+// }
+
+// console.log(maiorNum(20, 10, 22));
+
+// Exercício 04 - Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
+
+function value (firstName, secondName) {
+    if (firstName !== 'Thalisson') {
+        return 'positive';
+    } else if (secondName !== 'Gonçalves') {
+        return 'negative';
     } else {
-        return terceiroNum + ' é maior que ' + primeiroNum + ' e ' + segundoNum + '.';
+        return 0;
     }
 }
 
-console.log(maiorNum(20, 10, 22));
+console.log(value('Thalisson Gonçalves'));
