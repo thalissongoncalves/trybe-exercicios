@@ -9,12 +9,14 @@
 
 // Retorno esperado: false
 
-function palindromo (palavra) {
-    if (palavra === 'ovo') {
+function verificaPalindrome(string) {
+    let reverse = string.split('').reverse().join('');
+    if (reverse === string) {
         return true;
     } else {
         return false;
     }
-};
+}
 
-console.log(palindromo('ova'));
+console.log(verificaPalindrome('arara'));
+console.log(verificaPalindrome('desenvolvimento'));
