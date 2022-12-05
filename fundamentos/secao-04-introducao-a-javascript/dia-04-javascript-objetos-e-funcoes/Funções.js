@@ -68,14 +68,34 @@
 
 // Exercício 04 - Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
 
-function value (firstName, secondName) {
-    if (firstName !== 'Thalisson') {
-        return 'positive';
-    } else if (secondName !== 'Gonçalves') {
-        return 'negative';
+// function value (firstName, secondName) {
+//     if (firstName !== 'Thalisson') {
+//         return 'positive';
+//     } else if (secondName !== 'Gonçalves') {
+//         return 'negative';
+//     } else {
+//         return 0;
+//     }
+// }
+
+// console.log(value('Thalisson Gonçalves'));
+
+// Exercício 05 - Faça um programa que receba três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido, o programa deve retornar uma mensagem de erro.
+
+// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
+
+// Um ângulo será considerado inválido se não tiver um valor positivo.
+
+function triangle (angleOne, angleTwo, angleThree) {
+    if (angleOne !== 60) {
+        return 'false';
+    } else if (angleTwo !== 60) {
+        return 'false';
+    } else if (angleThree !== 60) {
+        return 'false';
     } else {
-        return 0;
+        return 'true';
     }
 }
 
-console.log(value('Thalisson Gonçalves'));
+console.log(triangle(60, 60, 60));
