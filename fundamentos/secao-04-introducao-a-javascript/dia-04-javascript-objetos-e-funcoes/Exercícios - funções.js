@@ -39,3 +39,22 @@ function indexOfTheLargest (numbers) {
 }
 
 console.log(indexOfTheLargest([1, 2, 3, 4, 5, 2]));
+
+// Exercício 03 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+// Array de teste: [2, 4, 6, 7, 10, 0, -3];.
+
+// Valor esperado no retorno da função: 6.
+
+function minorIndex (numbers) {
+    let minorIndex = 0;
+    for (index in numbers) {
+        if (numbers[minorIndex] > numbers[index]) {
+            minorIndex = index;
+        }
+    }
+
+    return minorIndex;
+}
+
+console.log(minorIndex([2, 4, 6, 7, 10, 1, 3]));
