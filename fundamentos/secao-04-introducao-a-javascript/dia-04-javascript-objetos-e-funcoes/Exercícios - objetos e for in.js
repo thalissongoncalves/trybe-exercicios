@@ -23,3 +23,14 @@ let info = {
 
 info['recorrente'] = 'Sim';
 console.log(info);
+
+// Exercício 03 - Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+
+// personagem
+// origem
+// nota
+// recorrente
+
+for (let index in info) {
+    console.log(index);
+}
