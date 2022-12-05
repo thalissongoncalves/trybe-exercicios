@@ -76,3 +76,33 @@ function indexWithMostCharacters (strings) {
 }
 
 console.log(indexWithMostCharacters(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+// Exercício 05 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+// Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+
+// Valor esperado no retorno da função: 2.
+
+function mostRepeatedNumber (numbers) {
+    let contRepetido = 0;
+    let contNumero = 0;
+    let indexNumeroRepetido = 0;
+
+    for (let index in numbers) {
+        let verificaNumero = numbers[index];
+        for (let index2 in numbers) {
+            if (verificaNumero === numbers[index2]) {
+                contNumero += 1;
+            }
+        }
+        if (contNumero > contRepetido) {
+            contRepetido = contNumero;
+            indexNumeroRepetido = index;
+        }
+        contNumero = 0;
+    }
+
+    return numbers[indexNumeroRepetido];
+}
+
+console.log(mostRepeatedNumber([4, 3, 4, 5, 8, 4, 3]));
