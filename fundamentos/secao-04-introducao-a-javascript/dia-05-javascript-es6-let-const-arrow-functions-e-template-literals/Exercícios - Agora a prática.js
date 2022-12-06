@@ -12,3 +12,21 @@ function imprimeIdade() {
     
   }
   imprimeIdade()
+
+// Exercício 02
+
+// 🚀 Altere o valor das propriedades do objeto, para que respeite as características da variável do tipo const;
+// Copie o código abaixo e rode-o para verificar sua saída:
+
+  const pessoa = {
+    nome: 'Henri',
+    idade: 20
+  }
+  pessoa.nome = {
+    nome: 'Luna'
+  }
+  pessoa.idade = {
+    idade: 19
+  } 
+  console.log('Nome:', pessoa.nome);
+  console.log('Idade:', pessoa.idade);
