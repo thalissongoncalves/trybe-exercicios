@@ -46,13 +46,23 @@
 
 // Copie o código abaixo:
 
-const name = 'Adriana';
-const lastName = 'Soares';
-console.log('Olá' + ',' + name + ' ' + lastName + '!');
-function soma(a,b) {
-  let resultado = a + b;
-  return resultado;
-}
-let a = 3;
-let b = 5;
-console.log(`O resultado da soma de ${a} + ${b} é: ${soma(a,b)}`);
+// const name = 'Adriana';
+// const lastName = 'Soares';
+// console.log('Olá' + ',' + name + ' ' + lastName + '!');
+// function soma(a,b) {
+//   let resultado = a + b;
+//   return resultado;
+// }
+// let a = 3;
+// let b = 5;
+// console.log(`O resultado da soma de ${a} + ${b} é: ${soma(a,b)}`);
+
+// Exercício 05
+
+// Modifique a estrutura das funções a seguir para que elas sejam arrow functions;
+
+// 🚀 Transforme a função numeroAleatorio em uma arrow function;
+// Copie o código abaixo:
+
+const numeroAleatorio = () => Math.random();
+  console.log(numeroAleatorio());
