@@ -30,3 +30,12 @@ function imprimeIdade() {
   } 
   console.log('Nome:', pessoa.nome);
   console.log('Idade:', pessoa.idade);
+
+// Exercício 03
+
+// 🚀 Modifique a variável para que não ocorra Erro;
+// Copie o código abaixo e rode-o para verificar sua saída:
+
+const favoriteFood = {comida: 'Lasanha'};
+favoriteFood.comida = 'Hamburguer';
+console.log('Comida Favorita:', favoriteFood.comida);
