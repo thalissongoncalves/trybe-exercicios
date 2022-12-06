@@ -64,5 +64,13 @@
 // 🚀 Transforme a função numeroAleatorio em uma arrow function;
 // Copie o código abaixo:
 
-const numeroAleatorio = () => Math.random();
-  console.log(numeroAleatorio());
+// const numeroAleatorio = () => Math.random();
+//   console.log(numeroAleatorio());
+
+// Exercício 06
+
+// 🚀 Transforme a função hello em uma arrow function;
+
+const hello = (nome) => `Olá, ${nome}!`
+let nome = 'Ivan';
+console.log(hello(nome));
