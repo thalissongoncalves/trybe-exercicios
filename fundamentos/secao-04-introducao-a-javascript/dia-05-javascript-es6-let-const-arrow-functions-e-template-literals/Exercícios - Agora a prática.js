@@ -80,6 +80,18 @@
 // 🚀 Transforme a função nomeCompleto em uma arrow function;
 
 
-const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`;
+// const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`;
 
-console.log(nomeCompleto('Ivan', 'Pires'));
+// console.log(nomeCompleto('Ivan', 'Pires'));
+
+// Exercício 08
+
+// 🚀 Altere a expressão if/else utilizando ternary operator;
+
+let speed = 90;
+const speedCar = (speed) => (
+  speed >= 120 ? `Você ultrapassou o limite de velocidade` : `Você está na velocidade permitida`
+);
+
+console.log(speedCar(speed));
+
