@@ -27,36 +27,59 @@
 // Atenção! Quando você tem um número pequeno à direita de um número grande, eles devem ser somados. Exemplo: XI = 10 + 1 = 11. No entanto, se o número pequeno está à esquerda de um número maior que ele, ele deve ser subtraído. Exemplo: IX = 10 - 1 = 9.
 
 
-const numerosRomanos = {
-    i: 1,
-    v: 5,
-    x: 10,
-    xl: 50,
-    c: 100,
-    d: 500,
-    m: 1000,
-}
+// const numerosRomanos = {
+//     i: 1,
+//     v: 5,
+//     x: 10,
+//     xl: 50,
+//     c: 100,
+//     d: 500,
+//     m: 1000,
+// }
 
-function romanoParaDecimal(numero) {
-    numero = numero.toLowerCase();
-    const len = numero.length;
-    let soma = numerosRomanos[numero[len - 1]];
-    let atual = numerosRomanos[numero[len - 1]];
+// function romanoParaDecimal(numero) {
+//     numero = numero.toLowerCase();
+//     const len = numero.length;
+//     let soma = numerosRomanos[numero[len - 1]];
+//     let atual = numerosRomanos[numero[len - 1]];
 
-    for (let index = 2; index <= len; index += 1) {
-        const prox = numerosRomanos[numero[len - index]];
-        if (atual <= prox) {
-            soma += prox;
-          } else {
-            soma -= prox;
-          }
+//     for (let index = 2; index <= len; index += 1) {
+//         const prox = numerosRomanos[numero[len - index]];
+//         if (atual <= prox) {
+//             soma += prox;
+//           } else {
+//             soma -= prox;
+//           }
 
-        atual = prox;
+//         atual = prox;
+//     }
+
+//     return soma;
+// }
+
+// console.log(romanoParaDecimal('MMXVIII')); 
+// console.log(romanoParaDecimal('VI')); 
+// console.log(romanoParaDecimal('IV')); 
+
+// Exercício 02 - Crie uma função chamada arrayOfNumbers que receberá a variável vector como parâmetro.
+
+// Através de um loop for, percorra essa variável, busque os números pares e os adicione a um novo array, que deverá ser retornado ao final pela função.
+
+let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+
+const arrayOfNumbers = (vector) => {
+    const newArray = [];
+    for (let index = 0; index < vector.length; index += 1) {
+            const numbers = vector[index];
+            for (let indexSub = 0; indexSub < numbers.length; indexSub += 1) {
+                const current = numbers[indexSub];
+
+                if ((current % 2) === 0) {
+                    newArray.push(current);
+                }
+            }
     }
-
-    return soma;
+    return newArray;
 }
 
-console.log(romanoParaDecimal('MMXVIII')); 
-console.log(romanoParaDecimal('VI')); 
-console.log(romanoParaDecimal('IV')); 
+console.log(arrayOfNumbers(vector))
