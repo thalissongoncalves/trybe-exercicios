@@ -40,6 +40,7 @@ console.log(substituaX('Thalisson'));
 // Declare dentro da função uma variável com o nome skills, do tipo const;
 
 // A variável skills deverá ser um array contendo três strings com tecnologias que você já aprendeu.
+
 // Crie uma varável do tipo let e concatene o valor retornado da Função 1 - substituaX (utilize template literals), a frase 'Minhas três principais habilidades são:' e o valor da variável skills.
 
 // Exemplo de retorno:
@@ -52,3 +53,10 @@ console.log(substituaX('Thalisson'));
 // HTML
 // CSS
 
+const minhasSkills = (substituaX) => {
+    const skills = ['html', 'css', 'unix'];
+    return `Minhas três principais habilidades são:
+${skills}`;
+}
+
+console.log(minhasSkills())
