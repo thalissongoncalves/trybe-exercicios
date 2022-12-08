@@ -65,21 +65,62 @@
 
 // Através de um loop for, percorra essa variável, busque os números pares e os adicione a um novo array, que deverá ser retornado ao final pela função.
 
-let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+// let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
 
-const arrayOfNumbers = (vector) => {
-    const newArray = [];
-    for (let index = 0; index < vector.length; index += 1) {
-            const numbers = vector[index];
-            for (let indexSub = 0; indexSub < numbers.length; indexSub += 1) {
-                const current = numbers[indexSub];
+// const arrayOfNumbers = (vector) => {
+//     const newArray = [];
+//     for (let index = 0; index < vector.length; index += 1) {
+//             const numbers = vector[index];
+//             for (let indexSub = 0; indexSub < numbers.length; indexSub += 1) {
+//                 const current = numbers[indexSub];
 
-                if ((current % 2) === 0) {
-                    newArray.push(current);
-                }
-            }
+//                 if ((current % 2) === 0) {
+//                     newArray.push(current);
+//                 }
+//             }
+//     }
+//     return newArray;
+// }
+
+// console.log(arrayOfNumbers(vector))
+
+// Exercício 03 - A partir do array de frutas basket, retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array [‘Melancia’, ‘Abacate’, ‘Melancia’, ‘Melancia’, ‘Uva’], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
+
+// Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
+
+const basket = [
+    'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+    'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+    'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+    'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+    'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+    'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+    'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+    'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+    'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+    'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+    'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+    'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+    'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+    'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+    'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+    'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+    'Banana', 'Pera', 'Abacate', 'Uva',
+  ];
+
+
+const object = {};
+    for(let index = 0; index < basket.length; index += 1) {
+        const fruit = basket[index];
+        if (!object[fruit]) object[fruit] = 0;
+        object[fruit] += 1;
     }
-    return newArray;
-}
 
-console.log(arrayOfNumbers(vector))
+const summaries = [];
+    for(fruit in object) {
+        let message = `${object[fruit]} ${fruit}`;
+        if (object[fruit] > 1) message += 's';
+        summaries.push(message);
+    }
+
+console.log(`Sua cesta possui: ${summaries.join(', ')}.`);
