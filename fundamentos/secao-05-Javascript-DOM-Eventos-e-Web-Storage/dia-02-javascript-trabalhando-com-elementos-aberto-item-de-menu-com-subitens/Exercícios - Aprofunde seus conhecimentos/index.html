@@ -107,5 +107,14 @@
       terceiroFilhoDoElementoMainContent.id = 'terceiroFilhoDoElementoMainContent';
       rightContent.appendChild(terceiroFilhoDoElementoMainContent);
 
+    // Passo 07
+    // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      const smallImage = document.getElementById('segundoFilhoDoElementoMainContent');
+      primeiroFilhoDoElementoLeftContent = document.createElement('img');
+      primeiroFilhoDoElementoLeftContent.className = 'small-image';
+      primeiroFilhoDoElementoLeftContent.id = 'primeiroFilhoDoElementoLeftContent';
+      primeiroFilhoDoElementoLeftContent.src = 'https://picsum.photos/200';
+      smallImage.appendChild(primeiroFilhoDoElementoLeftContent);
+
     </script>
   </body>
