@@ -82,7 +82,10 @@
       mainContent.appendChild(primeiroFilhoDoElementoMainContent);
 
     // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-      
+      const paragraph = document.getElementById('primeiroFilhoDoElementoMainContent');
+      primeiroFilhoDaSectionCenterContent = document.createElement('p');
+      primeiroFilhoDaSectionCenterContent.innerText = 'Trybe vai dominar o Brasil!';
+      primeiroFilhoDoElementoMainContent.appendChild(primeiroFilhoDaSectionCenterContent);
 
     </script>
   </body>
