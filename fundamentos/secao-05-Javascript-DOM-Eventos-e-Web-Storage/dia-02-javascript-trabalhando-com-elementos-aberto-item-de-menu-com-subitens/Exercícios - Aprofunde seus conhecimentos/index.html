@@ -58,6 +58,7 @@
   <body id="pai">
     <script>
 
+    // Passo 01
     // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
       const pai = document.getElementById('pai');
       primeiroFilhoDoElementoPai = document.createElement('h1');
@@ -67,6 +68,7 @@
       const filho = document.getElementById('primeiroFilhoDoElementoPai')
       filho.innerText = 'TrybeTrip - Agência de Viagens';
 
+    // Passo 02
     // Adicione a tag main com a classe main-content como filho da tag body;
       const pai2 = document.getElementById('pai');
       segundoFilhoDoElementoPai = document.createElement('main');
@@ -74,6 +76,7 @@
       segundoFilhoDoElementoPai.id = 'segundoFilhoDoElementoPai';
       pai2.appendChild(segundoFilhoDoElementoPai);
 
+    // Passo 03
     // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
       const mainContent = document.getElementById('segundoFilhoDoElementoPai');
       primeiroFilhoDoElementoMainContent = document.createElement('section');
@@ -81,11 +84,19 @@
       primeiroFilhoDoElementoMainContent.id = 'primeiroFilhoDoElementoMainContent';
       mainContent.appendChild(primeiroFilhoDoElementoMainContent);
 
+    // Passo 04
     // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       const paragraph = document.getElementById('primeiroFilhoDoElementoMainContent');
       primeiroFilhoDaSectionCenterContent = document.createElement('p');
       primeiroFilhoDaSectionCenterContent.innerText = 'Trybe vai dominar o Brasil!';
-      primeiroFilhoDoElementoMainContent.appendChild(primeiroFilhoDaSectionCenterContent);
+      paragraph.appendChild(primeiroFilhoDaSectionCenterContent);
+
+    // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const leftContent = document.getElementById('segundoFilhoDoElementoPai');
+      segundoFilhoDoElementoMainContent = document.createElement('section');
+      segundoFilhoDoElementoMainContent.className = 'left-content';
+      segundoFilhoDoElementoMainContent.id = 'segundoFilhoDoElementoMainContent';
+      leftContent.appendChild(segundoFilhoDoElementoMainContent);
 
     </script>
   </body>
