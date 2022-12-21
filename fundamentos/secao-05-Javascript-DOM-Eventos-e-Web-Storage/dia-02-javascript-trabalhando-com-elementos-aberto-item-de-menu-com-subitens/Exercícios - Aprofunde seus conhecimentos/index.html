@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="pai">
+    <script>
+
+    // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
+      const pai = document.getElementById('pai');
+      primeiroFilhoDoElementoPai = document.createElement('h1');
+      primeiroFilhoDoElementoPai.id = 'primeiroFilhoDoElementoPai';
+      pai.appendChild(primeiroFilhoDoElementoPai);
+
+      const filho = document.getElementById('primeiroFilhoDoElementoPai')
+      filho.innerText = 'TrybeTrip - Agência de Viagens';
+
+    // Adicione a tag main com a classe main-content como filho da tag body;
+      const pai2 = document.getElementById('pai');
+      segundoFilhoDoElementoPai = document.createElement('main');
+      segundoFilhoDoElementoPai.className = 'main-content';
+      segundoFilhoDoElementoPai.id = 'segundoFilhoDoElementoPai';
+      pai2.appendChild(segundoFilhoDoElementoPai);
+
+    // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      const mainContent = document.getElementById('segundoFilhoDoElementoPai');
+      primeiroFilhoDoElementoMainContent = document.createElement('section');
+      primeiroFilhoDoElementoMainContent.className = 'center-content';
+      primeiroFilhoDoElementoMainContent.id = 'primeiroFilhoDoElementoMainContent';
+      mainContent.appendChild(primeiroFilhoDoElementoMainContent);
+
+    // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      
+
+    </script>
+  </body>
