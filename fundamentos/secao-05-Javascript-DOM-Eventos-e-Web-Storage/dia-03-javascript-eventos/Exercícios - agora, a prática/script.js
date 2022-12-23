@@ -57,3 +57,26 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
     days.appendChild(daysChild);
 }
 
+// Parte 2
+// Implemente uma função que crie dinamicamente um botão com o nome “Feriados”;
+// Sua função deve receber um parâmetro com a string 'Feriados';
+// Adicione a este botão a ID "btn-holiday";
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
+const createButton = (buttonName) => {
+    const divElement = document.querySelector('.buttons-container');
+    buttonAdd = document.createElement('button');
+    buttonAddId = 'btn-holiday';
+
+    buttonAdd.innerHTML = buttonName;
+    buttonAdd.id = buttonAddId;
+    divElement.appendChild(buttonAdd);
+}
+
+createButton('Feriados');
+
+// Parte 3
+// Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday";
+// Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday".
+// De olho na dica 👀: É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor “rgb(238,238,238)”.
+
