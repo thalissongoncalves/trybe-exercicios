@@ -233,3 +233,39 @@ const setDayColor = () => {
 }
 
 setDayColor();
+
+// Bônus
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto “COMPROMISSOS”, adiciona o item à lista “MEUS COMPROMISSOS” ao clicar no botão “ADICIONAR”;
+// Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em “ADICIONAR”;
+// Ao pressionar a tecla “enter” o evento também deverá ser disparado.
+// De olho na dica 👀: Você pode utilizar a propriedade key.
+
+const addAppointment = () => {
+  const taskInput = document.getElementById('task-input');
+  const btnAdd = document.getElementById('btn-add');
+  const myTasks = document.querySelector('.task-list');
+
+  btnAdd.addEventListener('click', () => {
+    if (taskInput.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = taskInput.value;
+
+      myTasks.appendChild(newLi);
+      taskInput.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  taskInput.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' && taskInput.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = taskInput.value;
+
+      myTasks.appendChild(newLi);
+      taskInput.value = '';
+    }
+  })
+}
+
+addAppointment();
