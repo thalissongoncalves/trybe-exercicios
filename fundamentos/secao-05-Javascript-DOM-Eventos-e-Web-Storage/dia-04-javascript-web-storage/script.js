@@ -75,30 +75,65 @@ const divChild01Personalization = () => {
   button01.style.display = 'block';
   button01.style.margin = 'auto';
   button01.style.width = '100%';
+  button01.addEventListener('click', () => {
+    localStorage.setItem('cordefundo', 'white');
+    if(localStorage.getItem('cordefundo') === 'white') {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'white';
+    }
+  })
   divChild01.appendChild(button01);
   const button02 = document.createElement('button');
   button02.innerHTML = 'black';
   button02.style.display = 'block';
   button02.style.margin = 'auto';
   button02.style.width = '100%';
+  button02.addEventListener('click', () => {
+    localStorage.setItem('cordefundo', 'black');
+    if(localStorage.getItem('cordefundo') === 'black') {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'black';
+    }
+  })
   divChild01.appendChild(button02);
   const button03 = document.createElement('button');
   button03.innerHTML = 'green';
   button03.style.display = 'block';
   button03.style.margin = 'auto';
   button03.style.width = '100%';
+  button03.addEventListener('click', () => {
+    localStorage.setItem('cordefundo', 'green');
+    if(localStorage.getItem('cordefundo') === 'green') {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'green';
+    }
+  })
   divChild01.appendChild(button03);
   const button04 = document.createElement('button');
   button04.innerHTML = 'blue';
   button04.style.display = 'block';
   button04.style.margin = 'auto';
   button04.style.width = '100%';
+  button04.addEventListener('click', () => {
+    localStorage.setItem('cordefundo', 'blue');
+    if(localStorage.getItem('cordefundo') === 'blue') {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'blue';
+    }
+  })
   divChild01.appendChild(button04);
   const button05 = document.createElement('button');
   button05.innerHTML = 'yellow';
   button05.style.display = 'block';
   button05.style.margin = 'auto';
   button05.style.width = '100%';
+  button05.addEventListener('click', () => {
+    localStorage.setItem('cordefundo', 'yellow');
+    if(localStorage.getItem('cordefundo') === 'yellow') {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'yellow';
+    }
+  })
   divChild01.appendChild(button05);
 }
 
@@ -113,14 +148,35 @@ const divChild02Personalization = () => {
   const button01 = document.createElement('button');
   button01.innerText = 'black';
   button01.style.width = '100%';
+  button01.addEventListener('click', () => {
+    localStorage.setItem('cordafonte', 'black');
+    if(localStorage.getItem('cordafonte') === 'black') {
+      const body = document.querySelector('body');
+      body.style.color = 'black';
+    }
+  })
   divChild02.appendChild(button01);
   const button02 = document.createElement('button');
   button02.innerText = 'red';
   button02.style.width = '100%';
+  button02.addEventListener('click', () => {
+    localStorage.setItem('cordafonte', 'red');
+    if(localStorage.getItem('cordafonte') === 'red') {
+      const body = document.querySelector('body');
+      body.style.color = 'red';
+    }
+  })
   divChild02.appendChild(button02);
   const button03 = document.createElement('button');
   button03.innerText = 'white';
   button03.style.width = '100%';
+  button03.addEventListener('click', () => {
+    localStorage.setItem('cordafonte', 'white');
+    if(localStorage.getItem('cordafonte') === 'white') {
+      const body = document.querySelector('body');
+      body.style.color = 'white';
+    }
+  })
   divChild02.appendChild(button03);
 }
 
@@ -135,22 +191,57 @@ const divChild03Personalization = () => {
   const button01 = document.createElement('button');
   button01.innerText = '8pt';
   button01.style.width = '100%';
+  button01.addEventListener('click', () => {
+    localStorage.setItem('tamanhodafonte', '8px');
+    if(localStorage.getItem('tamanhodafonte') === '8px') {
+      const body = document.querySelector('body');
+      body.style.fontSize = '8px';
+    }
+  })
   divChild03.appendChild(button01);
   const button02 = document.createElement('button');
   button02.innerText = '10pt';
   button02.style.width = '100%';
+  button02.addEventListener('click', () => {
+    localStorage.setItem('tamanhodafonte', '10px');
+    if(localStorage.getItem('tamanhodafonte') === '10px') {
+      const body = document.querySelector('body');
+      body.style.fontSize = '10px';
+    }
+  })
   divChild03.appendChild(button02);
   const button03 = document.createElement('button');
   button03.innerText = '12pt';
   button03.style.width = '100%';
+  button03.addEventListener('click', () => {
+    localStorage.setItem('tamanhodafonte', '12px');
+    if(localStorage.getItem('tamanhodafonte') === '12px') {
+      const body = document.querySelector('body');
+      body.style.fontSize = '12px';
+    }
+  })
   divChild03.appendChild(button03);
   const button04 = document.createElement('button');
   button04.innerText = '14pt';
   button04.style.width = '100%';
+  button04.addEventListener('click', () => {
+    localStorage.setItem('tamanhodafonte', '14px');
+    if(localStorage.getItem('tamanhodafonte') === '14px') {
+      const body = document.querySelector('body');
+      body.style.fontSize = '14px';
+    }
+  })
   divChild03.appendChild(button04);
   const button05 = document.createElement('button');
   button05.innerText = '20pt';
   button05.style.width = '100%';
+  button05.addEventListener('click', () => {
+    localStorage.setItem('tamanhodafonte', '20px');
+    if(localStorage.getItem('tamanhodafonte') === '20px') {
+      const body = document.querySelector('body');
+      body.style.fontSize = '20px';
+    }
+  })
   divChild03.appendChild(button05);
 }
 
@@ -165,22 +256,57 @@ const divChild04Personalization = () => {
   const button01 = document.createElement('button');
   button01.innerText = '1.0';
   button01.style.width = '100%';
+  button01.addEventListener('click', () => {
+    localStorage.setItem('espacamentoentrelinhas', '1em');
+    if(localStorage.getItem('espacamentoentrelinhas') === '1em') {
+      const body = document.querySelector('body');
+      body.style.lineHeight = '1em';
+    }
+  })
   divChild04.appendChild(button01);
   const button02 = document.createElement('button');
   button02.innerText = 'normal';
   button02.style.width = '100%';
+  button02.addEventListener('click', () => {
+    localStorage.setItem('espacamentoentrelinhas', 'normal');
+    if(localStorage.getItem('espacamentoentrelinhas') === 'normal') {
+      const body = document.querySelector('body');
+      body.style.lineHeight = 'normal';
+    }
+  })
   divChild04.appendChild(button02);
   const button03 = document.createElement('button');
   button03.innerText = '1.5';
   button03.style.width = '100%';
+  button03.addEventListener('click', () => {
+    localStorage.setItem('espacamentoentrelinhas', '1.5em');
+    if(localStorage.getItem('espacamentoentrelinhas') === '1.5em') {
+      const body = document.querySelector('body');
+      body.style.lineHeight = '1.5em';
+    }
+  })
   divChild04.appendChild(button03);
   const button04 = document.createElement('button');
   button04.innerText = '2.0';
   button04.style.width = '100%';
+  button04.addEventListener('click', () => {
+    localStorage.setItem('espacamentoentrelinhas', '2em');
+    if(localStorage.getItem('espacamentoentrelinhas') === '2em') {
+      const body = document.querySelector('body');
+      body.style.lineHeight = '2em';
+    }
+  })
   divChild04.appendChild(button04);
   const button05 = document.createElement('button');
   button05.innerText = '3.0';
   button05.style.width = '100%';
+  button05.addEventListener('click', () => {
+    localStorage.setItem('espacamentoentrelinhas', '3em');
+    if(localStorage.getItem('espacamentoentrelinhas') === '3em') {
+      const body = document.querySelector('body');
+      body.style.lineHeight = '3em';
+    }
+  })
   divChild04.appendChild(button05);
 }
 
@@ -195,10 +321,24 @@ const divChild05Personalization = () => {
   const button01 = document.createElement('button');
   button01.innerText = 'Arial';
   button01.style.width = '100%';
+  button01.addEventListener('click', () => {
+    localStorage.setItem('fonttype', 'Arial');
+    if(localStorage.getItem('fonttype') === 'Arial') {
+      const body = document.querySelector('body');
+      body.style.fontFamily = 'Arial';
+    }
+  })
   divChild05.appendChild(button01);
   const button02 = document.createElement('button');
   button02.innerText = 'Times New Roman';
   button02.style.width = '100%';
+  button02.addEventListener('click', () => {
+    localStorage.setItem('fonttype', 'Times New Roman');
+    if(localStorage.getItem('fonttype') === 'Times New Roman') {
+      const body = document.querySelector('body');
+      body.style.fontFamily = 'Times New Roman';
+    }
+  })
   divChild05.appendChild(button02);
 }
 
