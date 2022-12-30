@@ -16,11 +16,19 @@ window.onload = function () {
     localStorage.setItem('5.4-font-color', selected.value);
   })
 
-  let inputFontSize = document.querySelector('input[name="font-size"]')
+  let inputFontSize = document.querySelector('input[name="font-size"]');
   inputFontSize.addEventListener('change', () => {
     let paragraph = document.querySelector('p');
     paragraph.style.fontSize = `${inputFontSize.value}px`;
 
     localStorage.setItem('5.4-font-size', `${inputFontSize.value}px`);
+  })
+
+  let inputLineHeight = document.querySelector('input[name="line-height"]');
+  inputLineHeight.addEventListener('change', () => {
+    let paragraph = document.querySelector('p');
+    paragraph.style.lineHeight = `${inputLineHeight.value}px`;
+
+    localStorage.setItem('5.4-line-height', `${inputLineHeight.value}px`);
   })
 }
