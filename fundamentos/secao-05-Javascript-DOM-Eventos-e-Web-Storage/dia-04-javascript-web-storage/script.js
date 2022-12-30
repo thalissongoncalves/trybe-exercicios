@@ -31,4 +31,12 @@ window.onload = function () {
 
     localStorage.setItem('5.4-line-height', `${inputLineHeight.value}px`);
   })
+
+  let fontFamily = document.querySelector('#fontfamily');
+  fontFamily.addEventListener('change', () => {
+    let paragraph = document.querySelector('p');
+    paragraph.style.fontFamily = fontFamily.value;
+
+    localStorage.setItem('5.4-font-family', fontFamily.value);
+  })
 }
