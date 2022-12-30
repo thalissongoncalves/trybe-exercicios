@@ -39,4 +39,15 @@ window.onload = function () {
 
     localStorage.setItem('5.4-font-family', fontFamily.value);
   })
+
+  let savedBackground = localStorage.getItem('5.4-background-color');
+  document.body.style.backgroundColor = savedBackground;
+  let savedFontColor = localStorage.getItem('5.4-font-color');
+  document.body.style.color = savedFontColor;
+  let savedFontSize = localStorage.getItem('5.4-font-size');
+  document.body.style.fontSize = savedFontSize;
+  let savedLineHeight = localStorage.getItem('5.4-line-height');
+  document.body.style.lineHeight = savedLineHeight;
+  let savedFontFamily = localStorage.getItem('5.4-font-family');
+  document.body.style.fontFamily = savedFontFamily;
 }
