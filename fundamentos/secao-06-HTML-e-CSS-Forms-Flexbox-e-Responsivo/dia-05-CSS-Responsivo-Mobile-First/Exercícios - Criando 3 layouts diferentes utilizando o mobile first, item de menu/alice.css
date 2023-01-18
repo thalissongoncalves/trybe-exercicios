@@ -1,0 +1,226 @@
+html {
+    box-sizing: border-box;
+  }
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .container>header>p {
+        font-size: 23px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container>header>nav>ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: bold;
+        align-items: center;
+        margin-right: 35px;
+        font-style: italic;
+    }
+
+    .container>header>nav>ul>li:hover {
+        text-decoration: underline;
+        color: pink;
+    }
+
+    .aside-one>h2 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aside-two>h2 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>h1 {
+        font-size: 25px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>p::first-letter {
+        margin-left: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer>p {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        margin: 20px;
+    }
+
+    .container>header>p {
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container>header>nav>ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: bold;
+        align-items: center;
+        margin-right: 35px;
+        font-style: italic;
+    }
+
+    .container>header>nav>ul>li:hover {
+        text-decoration: underline;
+        color: pink;
+    }
+
+    .aside-one>ul {
+        font-size: 20px;
+    }
+
+    .aside-one>h2 {
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aside-two>ul {
+        font-size: 20px;
+    }
+
+    .aside-two>h2 {
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>h1 {
+        font-size: 30px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>p {
+        font-size: 20px;
+    }
+
+    .main-content>p::first-letter {
+        margin-left: 20px;
+    }
+
+    footer {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer>p {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        margin: 25px;
+    }
+
+    .container>header>p {
+        font-size: 40px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container>header>nav>ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        font-weight: bold;
+        align-items: center;
+        margin-right: 35px;
+        line-height: 30px;
+        font-style: italic;
+    }
+
+    .container>header>nav>ul>li:hover {
+        text-decoration: underline;
+        color: pink;
+    }
+
+    .aside-one>ul {
+        font-size: 25px;
+    }
+
+    .aside-one>h2 {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aside-two>ul {
+        font-size: 25px;
+    }
+
+    .aside-two>h2 {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content>p {
+        font-size: 25px;
+    }
+
+    .main-content>p::first-letter {
+        margin-left: 20px;
+    }
+
+    footer {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer>p {
+        text-align: center;
+        font-weight: bold;
+    }
+}
