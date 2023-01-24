@@ -34,5 +34,5 @@ const mapString = (objectMap, string) => { // string = Abacate
     return mapString(map, string);
   }
 
-const functions = { encode, decode };
-module.exports = functions;
+const mapStringg = { encode, decode };
+module.exports = mapStringg;

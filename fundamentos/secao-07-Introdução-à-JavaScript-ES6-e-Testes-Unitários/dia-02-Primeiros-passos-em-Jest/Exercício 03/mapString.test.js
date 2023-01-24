@@ -1,4 +1,4 @@
-const { encode, decode } = require('./exercicio03.js');
+const { encode, decode } = require('./mapString.js');
 
 describe('Teste a função encode e decode', () => {
     it('A função encode é definida', () => {
