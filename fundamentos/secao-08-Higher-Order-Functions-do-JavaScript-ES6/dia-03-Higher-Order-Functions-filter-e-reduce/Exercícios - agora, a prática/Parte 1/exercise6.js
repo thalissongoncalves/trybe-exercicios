@@ -62,3 +62,13 @@ const books = [
   ];
 
 // 6 - Encontre o primeiro resultado cujo nome registrado começa com três iniciais e retorne o nome do livro.
+
+const getNameThreeInitials = () => {
+  return books.filter((book) => (
+  book.author.name[1] === '.'
+  && book.author.name[4] === '.'
+  && book.author.name[7] === '.'
+  ))
+}
+
+console.log(getNameThreeInitials());
