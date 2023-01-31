@@ -62,3 +62,7 @@ const books = [
 ];
 
 // 1 - Filtre todos os objetos do gênero ficção científica ou fantasia.
+
+const filterBooks = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
+
+console.log(filterBooks);
