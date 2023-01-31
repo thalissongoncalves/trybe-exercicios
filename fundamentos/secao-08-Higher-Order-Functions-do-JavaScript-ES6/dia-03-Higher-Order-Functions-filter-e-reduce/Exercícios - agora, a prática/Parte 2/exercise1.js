@@ -68,3 +68,7 @@ const countries = [
   ];
 
 // 1 - Calcule a quantidade total da população de todos os países.
+
+const sumPopulation = countries.reduce((arr, curr) => (arr + curr.population), 0);
+
+console.log(sumPopulation);
