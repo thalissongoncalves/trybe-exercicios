@@ -62,3 +62,14 @@ const books = [
   ];
 
 //  5 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const bookYears = () => {
+  return books
+  .filter((book) => {
+    if(book.releaseYear < 1963) {
+    return book;
+  }})
+  .map((book) => book.name)
+}
+
+console.log(bookYears())
