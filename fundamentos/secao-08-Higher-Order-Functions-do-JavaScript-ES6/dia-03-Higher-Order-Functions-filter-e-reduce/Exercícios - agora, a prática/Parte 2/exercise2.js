@@ -68,3 +68,7 @@ const countries = [
   ];
 
 // 2 - Calcule a área total de todos os países.
+
+const sumArea = countries.reduce((arr, curr) => (arr + curr.area), 0);
+
+console.log(sumArea);
