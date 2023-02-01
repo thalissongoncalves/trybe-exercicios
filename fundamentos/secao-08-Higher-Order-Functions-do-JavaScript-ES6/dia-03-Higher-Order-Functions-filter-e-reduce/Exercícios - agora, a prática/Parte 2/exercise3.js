@@ -68,3 +68,9 @@ const countries = [
   ];
 
 // 🚀 3 - Encontre o país com o maior nome.
+
+const countryBiggestName = countries.reduce((acc, curr) => {
+  return acc.name.length > curr.name.length ? acc : curr;
+});
+
+console.log(countryBiggestName)
