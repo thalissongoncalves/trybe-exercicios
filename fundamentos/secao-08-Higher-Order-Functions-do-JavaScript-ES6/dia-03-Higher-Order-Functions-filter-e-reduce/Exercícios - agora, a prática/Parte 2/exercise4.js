@@ -79,4 +79,4 @@ const countA = () => {
   }, 0);
 }
 
-console.log(countA())
+console.log(countA());
