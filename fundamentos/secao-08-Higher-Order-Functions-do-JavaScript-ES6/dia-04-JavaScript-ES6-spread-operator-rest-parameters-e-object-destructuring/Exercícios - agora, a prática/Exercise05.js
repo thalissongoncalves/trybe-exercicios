@@ -17,11 +17,14 @@ const ships = [
       measurementUnit: 'meters',
     },
     // measurementUnit: unidade de medida
-  ];
+];
   
-  // escreva shipLength abaixo
+// escreva shipLength abaixo
+const shipLength = ({ name, length, measurementUnit }) => {
+    return `${name} is ${length} ${measurementUnit} long`
+}
   
-  // retorno esperado
-  console.log(shipLength(ships[0])); // 'Titanic is 269.1 meters long'
-  console.log(shipLength(ships[1])); // 'Queen Mary 2 is 1132 feet long'
-  console.log(shipLength(ships[2])); // 'Yamato is 256 meters long'
+// retorno esperado
+console.log(shipLength(ships[0])); // 'Titanic is 269.1 meters long'
+console.log(shipLength(ships[1])); // 'Queen Mary 2 is 1132 feet long'
+console.log(shipLength(ships[2])); // 'Yamato is 256 meters long'
