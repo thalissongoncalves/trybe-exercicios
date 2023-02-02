@@ -27,6 +27,12 @@ const people = [
       nationality: 'Brazilian',
     },
     // bornIn: nascido em
-  ];
+];
   
   // escreva filterPeople abaixo
+const filterPeople = (list) => {
+    const nationalityFilter = list.filter(({ bornIn, nationality }) => nationality === 'Australian' && bornIn >= 1901 && bornIn <= 2000);
+    return nationalityFilter
+}
+
+console.log(filterPeople(people));
