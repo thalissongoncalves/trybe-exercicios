@@ -1,0 +1,13 @@
+{
+  "hash": "9ef1104f",
+  "browserHash": "5c9447c8",
+  "optimized": {
+    "nanoid": {
+      "src": "../../Configurando o ambiente de desenvolvimento, selecionado, item de menu/node_modules/nanoid/index.browser.js",
+      "file": "nanoid.js",
+      "fileHash": "cc2b0c17",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
