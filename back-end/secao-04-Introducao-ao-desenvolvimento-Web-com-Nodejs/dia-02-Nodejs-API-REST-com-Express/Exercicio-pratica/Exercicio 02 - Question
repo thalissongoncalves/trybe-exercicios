@@ -1,0 +1,4 @@
+Pergunta: Qual é a função do código de status 401?
+
+Resposta:
+    O código de resposta de status de erro do cliente HTTP 401 Unauthorized indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.
