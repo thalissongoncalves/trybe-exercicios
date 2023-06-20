@@ -1,0 +1,4 @@
+npm install chai-http@4.3.0 --save-dev --save-exact
+
+⚠️ Aviso: Para nos ajudar com esse desafio, utilizaremos o plugin Chai HTTP! Com ele poderemos simular uma request a nossa API 
+sem inicializá-la manualmente.
