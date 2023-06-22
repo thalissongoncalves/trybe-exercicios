@@ -1,0 +1,15 @@
+Em uma API, o conceito definido por essas regras é chamado de contrato. O contrato define aquilo que foi previamente acordado, ou seja, 
+como a API deverá se comportar em um determinado cenário.
+
+Para ficar ainda mais nítido, vamos utilizar novamente o endpoint GET /users/:userId. Podemos dizer que o contrato dele é: quando a pessoa 
+usuária existe, retornar a seguinte resposta:
+
+Código HTTP: 200 - OK;
+Body:
+{
+  "id": "123",
+  "name": "Dwight",
+  "fullName": "Dwight Schrute",
+  "email": "dwightschrute@dundermifflin.com"
+}
+
