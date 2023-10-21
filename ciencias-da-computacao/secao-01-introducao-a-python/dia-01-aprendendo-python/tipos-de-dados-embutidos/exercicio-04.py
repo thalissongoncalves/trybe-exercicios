@@ -1,4 +1,5 @@
 # Insira no objeto uma nova propriedade com o nome de chave “recorrente” e o valor “Sim”. Em seguida, imprima o objeto no console.
+# Remova a propriedade cuja chave é “origem” e imprima o objeto no console.
 
 info = {
   "personagem": "Margarida",
