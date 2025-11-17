@@ -16,6 +16,6 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 - [✅] 1-1: _HTML & CSS - Estruturas de Página_
 - [✅] 1-2: _HTML & CSS - Primeiros Passos em CSS_
-- [  ] 1-3: _HTML & CSS - Seletores e Posicionamento_
+- [✅] 1-3: _HTML & CSS - Seletores e Posicionamento_
 - [  ] 1-4: _HTML Semântico_
 - [  ] 1-5: _Projeto Lessons Learned_
