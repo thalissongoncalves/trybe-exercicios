@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Arial, Tahoma;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0A3D62;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+h3 {
+    border-left: black 4px solid;
+    font-size: 24px;
+    text-indent: 10px;
+}
+
+nav {
+    background-color: #0A3D62;
+}
+
+nav ul {
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+
+nav ul li a {
+    color: #82b5da;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+main {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
+    margin: auto;
+    margin-top: 10px;
+    max-width: 900px;
+    padding: 25px;
+}
+
+aside {
+    text-align: center;
+}
+
+section ul li {
+    line-height: 25px;
+}
+
+footer {
+    background-color: white;
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.first-section {
+    margin-top: 40px;
+}
+
+.last-section {
+    margin-bottom: 40px;
+}
+
+.stomatopoda {
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto;
+    max-height: 350px;
+    width: 350px;
+}
