@@ -1,0 +1,108 @@
+body {
+    background-color: #FCF7EF;
+    color: #090302;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+main, footer {
+    margin: 0 15px;
+}
+
+h1, h2 {
+    color: #1A3C3C;
+}
+
+h2 {
+    margin: 0;
+}
+
+table {
+    /* border: #1A3C3C 1px solid; */
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #1A3C3C;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+table th {
+    color: #1A3C3C;
+}
+
+ol, ul {
+    padding: 10px 30px;
+    margin: 0;
+}
+
+#cabecalho {
+    background-color: #FCF7EF;
+    border-bottom: #1A3C3C 1px solid;
+    box-shadow: 1px 1px 10px #1A3C3C;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#cabecalho h1 {
+    margin: auto;
+}
+
+#minha_foto {
+    background-color: #FCF7EF;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(63, 63, 63);
+    margin: 5px;
+    padding: 2px;
+    width: 50px;
+}
+
+#rodape {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.first-section article, .first-section aside {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(63, 63, 63);
+    padding: 25px;
+    width: 25%;
+}
+
+.linkedin {
+    color: #1A3C3C;
+    text-decoration: underline;
+}
+
+.linkedin img {
+    width: 30px;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.second-section section {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(63, 63, 63);
+    padding: 25px;
+}
+
+.third-section {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
