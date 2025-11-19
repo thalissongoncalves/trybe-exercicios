@@ -48,7 +48,7 @@ Exemplo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/thalissongoncalves/project-lessons-learned.git
+   git clone https://github.com/thalissongoncalves/trybe-exercicios/tree/main/fundamentos/secao-02-introducao-a-html-e-css/project-lessons-learned
 
 2. Entre na pasta do projeto:
    ```bash
