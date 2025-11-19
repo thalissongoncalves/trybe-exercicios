@@ -40,7 +40,7 @@ Adicione aqui prints ou GIFs da página após finalizada.
 
 Exemplo:
 
-![Screenshot do projeto](./assets/lesson-learned.png)
+![Screenshot do projeto](./images/lesson-learned.png)
 
 ---
 
