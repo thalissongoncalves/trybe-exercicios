@@ -24,7 +24,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 - [✅] 3-1: _Primeiros passos no Javascript_
 - [✅] 3-2: _Array e estrutura de repetição_
-- [  ] 3-3: _Funções_
+- [✅] 3-3: _Funções_
 - [  ] 3-4: _Objetos_
 - [  ] 3-5: _JSON e dia de prática_
 - [  ] 3-6: _Projeto Supermercado Pirilampo_
