@@ -4,6 +4,8 @@ const compareTrue = (boolean1, boolean2) =>
 console.log(compareTrue(true, true));
 
 // Desafio 2 - Crie a função splitSentence
+const splitSentence = (string) => string.split(' ');
+console.log(splitSentence('go Trybe'));
 
 // Desafio 3 - Crie a função concatName
 
