@@ -8,6 +8,9 @@ const splitSentence = (string) => string.split(' ');
 console.log(splitSentence('go Trybe'));
 
 // Desafio 3 - Crie a função concatName
+const concatName = (arrayStr) =>
+  `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 4 - Crie a função footballPoints
 
