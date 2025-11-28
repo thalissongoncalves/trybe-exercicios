@@ -17,6 +17,22 @@ const footballPoints = (wins, ties) => (wins * 3) + (ties * 1);
 console.log(footballPoints(14, 8));
 
 // Desafio 5 - Crie a função highestCount
+const highestCount = (array) => {
+  let maior = array[0];
+  let contagem = 0;
+
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] > maior) {
+      maior = array[index]
+      contagem = 1
+    } else {
+      if (array[index] === maior) contagem += 1;
+    }
+  }
+
+  return contagem;
+};
+console.log(highestCount([9, 1, 2, 3, 4, 9, 5]))
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
