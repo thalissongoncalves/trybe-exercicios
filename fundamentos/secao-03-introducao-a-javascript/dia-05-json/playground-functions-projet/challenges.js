@@ -97,5 +97,61 @@ const fizzBuzz = (array) => {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
+const encode = (string) => {
+  let encodeResult = [];
+
+  for (index = 0; index < string.length; index += 1) {
+    if (string[index].toLowerCase() === 'a') {
+      let aLetter = (string[index] = 1);
+      encodeResult.push(aLetter);
+    } else if (string[index].toLowerCase() === 'e') {
+      let eLetter = (string[index] = 2);
+      encodeResult.push(eLetter);
+    } else if (string[index].toLowerCase() === 'i') {
+      let iLetter = (string[index] = 3);
+      encodeResult.push(iLetter);
+    } else if (string[index].toLowerCase() === 'o') {
+      let oLetter = (string[index] = 4);
+      encodeResult.push(oLetter);
+    } else if (string[index].toLowerCase() === 'u') {
+      let uLetter = (string[index] = 5);
+      encodeResult.push(uLetter);
+    } else {
+      encodeResult.push(string[index]);
+    }
+  }
+
+  return encodeResult.join("");
+};
+
+const decode = (string) => {
+  let decodeResult = [];
+
+  for (index = 0; index < string.length; index += 1) {
+    if (string[index] === "1") {
+      let numberOne = (string[index] = 'a');
+      decodeResult.push(numberOne);
+    } else if (string[index] === "2") {
+      let numberTwo = (string[index] = 'e');
+      decodeResult.push(numberTwo);
+    } else if (string[index] === "3") {
+      let numberThree = (string[index] = 'i');
+      decodeResult.push(numberThree);
+    } else if (string[index] === "4") {
+      let numberFour = (string[index] = 'o');
+      decodeResult.push(numberFour);
+    } else if (string[index] === "5") {
+      let numberFive = (string[index] = 'u');
+      decodeResult.push(numberFive);
+    } else {
+      decodeResult.push(string[index]);
+    }
+  }
+
+  return decodeResult.join("");
+};
+
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10 - Crie a função techList
