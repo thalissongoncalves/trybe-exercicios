@@ -29,5 +29,19 @@ const generatePhoneNumber = (phoneNumber) => {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12 -  Crie a função triangleCheck
+const triangleCheck = (lineA, lineB, lineC) => {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } else if (lineB < lineC + lineA && lineB > Math.abs(lineC - lineA)) {
+    return true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13 - Crie a função hydrate
