@@ -45,3 +45,14 @@ const triangleCheck = (lineA, lineB, lineC) => {
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13 - Crie a função hydrate
+const hydrate = (string) => {
+  const integerStrings = string.match(/\d+/g);
+  const integers = integerStrings ? integerStrings.map(Number) : [];
+  let sumWaters = 0;
+  for (index = 0; index < integers.length; index += 1) {
+    sumWaters += integers[index];
+  };
+  let result = sumWaters > 1 ? `${sumWaters} copos de água` : `${sumWaters} copo de água`;
+  return result;
+}
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
