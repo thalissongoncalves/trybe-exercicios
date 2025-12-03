@@ -155,3 +155,27 @@ console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10 - Crie a função techList
+const techList = (array, string) => {
+  const techArray = [];
+
+  if (!array && !string) {
+    return []
+  } else {
+    for (index = 0; index < array.length; index += 1) {
+      techArray.push({
+        tech: array[index],
+        name: string
+      })
+    }
+    
+    techArray.sort((a, b) => {
+      const techA = a.tech;
+      const techB = b.tech;
+
+      return techA.localeCompare(techB);
+    });
+
+    return techArray;
+  }
+}
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Thálisson'))
