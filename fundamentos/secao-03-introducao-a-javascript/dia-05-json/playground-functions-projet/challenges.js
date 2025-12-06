@@ -1,20 +1,16 @@
 // Desafio 1 - Crie a função compareTrue
 const compareTrue = (boolean1, boolean2) =>
   boolean1 && boolean2 ? true : false;
-console.log(compareTrue(true, true));
 
 // Desafio 2 - Crie a função splitSentence
 const splitSentence = (string) => string.split(' ');
-console.log(splitSentence('go Trybe'));
 
 // Desafio 3 - Crie a função concatName
 const concatName = (arrayStr) =>
   `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 4 - Crie a função footballPoints
 const footballPoints = (wins, ties) => (wins * 3) + (ties * 1);
-console.log(footballPoints(14, 8));
 
 // Desafio 5 - Crie a função highestCount
 const highestCount = (array) => {
@@ -32,7 +28,6 @@ const highestCount = (array) => {
 
   return contagem;
 };
-console.log(highestCount([9, 1, 2, 3, 4, 9, 5]))
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * height) / 2;
@@ -54,9 +49,6 @@ const calcAllAreas = (base, height, form) => {
     return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
   }
 };
-console.log(calcAllAreas(10, 50, 'retângulo'));
-console.log(calcAllAreas(10, 50, 'triângulo'));
-console.log(calcAllAreas(10, 50, 'quadrado'));
 
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
@@ -71,10 +63,6 @@ const catAndMouse = (mouse, cat1, cat2) => {
     return 'os gatos trombam e o rato foge';
   }
 };
-console.log(catAndMouse(10, 4, 22));
-console.log(catAndMouse(0, 3, 6));
-console.log(catAndMouse(0, 6, 3));
-console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8 - Crie a função fizzBuzz
 const fizzBuzz = (array) => {
@@ -94,12 +82,10 @@ const fizzBuzz = (array) => {
 
   return arrayResult;
 };
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 const encode = (string) => {
   let encodeResult = [];
-
   for (index = 0; index < string.length; index += 1) {
     if (string[index].toLowerCase() === 'a') {
       let aLetter = (string[index] = 1);
@@ -126,7 +112,6 @@ const encode = (string) => {
 
 const decode = (string) => {
   let decodeResult = [];
-
   for (index = 0; index < string.length; index += 1) {
     if (string[index] === "1") {
       let numberOne = (string[index] = 'a');
@@ -150,9 +135,6 @@ const decode = (string) => {
 
   return decodeResult.join("");
 };
-
-console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
 
 // Desafio 10 - Crie a função techList
 const techList = (array, string) => {
@@ -178,4 +160,3 @@ const techList = (array, string) => {
     return techArray;
   }
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Thálisson'))
