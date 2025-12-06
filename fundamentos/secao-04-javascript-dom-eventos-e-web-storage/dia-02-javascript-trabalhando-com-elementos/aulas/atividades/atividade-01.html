@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="parent-of-parent">
+      <section id="parent">
+        <section id="first-child"></section>
+        <section id="where-are-you">
+          <section id="first-child-of-child"></section>
+        </section>
+        Attention!
+        <section id="third-child"></section>
+        <section id="fourth-and-last-child"></section>
+      </section>
+    </main>
+  </body>
+  <script>
+    // Acesse o elemento where-are-you.
+    const whereAreYou = document.getElementById("where-are-you");
+    // Acesse parent a partir de where-are-you e adicione uma color a ele.
+    whereAreYou.parentNode.style.color = "red";
+    // Acesse o first-child-of-child e adicione um texto a ele. Você se lembra dos vídeos da aula anterior? Eles ensinam como fazer isso.
+    whereAreYou.children[0].innerText = "Olá mundo!";
+    // Acesse o first-child a partir de parent.
+    const parent = document.getElementById("parent").children[0];
+    // Acesse o first-child a partir de where-are-you.
+    const firstChild = whereAreYou.previousElementSibling;
+    // Acesse o texto Attention! a partir de where-are-you.
+    const attention = whereAreYou.nextSibling;
+    // Acesse o third-child a partir de where-are-you.
+    const thirdChild = whereAreYou.nextElementSibling;
+    // Acesse o third-child a partir de parent.
+    const thirdChildForTheParent = document.getElementById("parent").children[2];
+  </script>
+</html>
