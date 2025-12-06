@@ -65,6 +65,16 @@
         const paragraph = document.getElementsByTagName("p")[0].style.textTransform = "uppercase";
       }
       changeFirstParagraph();
+
+      const showParagraphsOnFooter = () => {
+        const paragraphs = document.getElementsByClassName("center-content")[0].children;
+        let newParagraph = "";
+        for (index = 0; index < paragraphs.length; index += 1) {
+          newParagraph += `${paragraphs[index].innerText} `;
+        }
+        document.getElementsByTagName("footer")[0].children[0].innerText = newParagraph;
+      }
+      showParagraphsOnFooter();
     </script>
   </body>
 </html>
