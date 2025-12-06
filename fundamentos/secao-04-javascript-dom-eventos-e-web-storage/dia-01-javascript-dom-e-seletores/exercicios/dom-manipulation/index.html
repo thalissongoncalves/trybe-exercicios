@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Desafio - JavaEscripito</h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <p>Último parágrafo.</p>
+    <script>
+      const changeParagraph = () => {
+        const paragraphTag = document.getElementsByTagName("p");
+        paragraphTag[1].innerText = "Me vejo sendo um desenvolvedor que conquistou uma oportunidade de emprego após anos de dedicação ao estudo!"
+      }
+      changeParagraph();
+
+      const changeYellowToGreen = () => {
+        const yellowDiv = document.getElementsByClassName("main-content");
+        yellowDiv[0].style.backgroundColor = "rgb(76, 164, 109)";
+      }
+      changeYellowToGreen();
+
+      const changeRedToWhite = () => {
+        const redDiv = document.getElementsByClassName("center-content");
+        redDiv[0].style.backgroundColor = "white"
+      }
+      changeRedToWhite();
+
+      const changeFirstParagraph = () => {
+        const paragraph = document.getElementsByTagName("p")[0].style.textTransform = "uppercase";
+      }
+      changeFirstParagraph();
+
+      const showParagraphsOnFooter = () => {
+        const paragraphs = document.getElementsByClassName("center-content")[0].children;
+        let newParagraph = "";
+        for (index = 0; index < paragraphs.length; index += 1) {
+          newParagraph += `${paragraphs[index].innerText} `;
+        }
+        document.getElementsByTagName("footer")[0].children[0].innerText = newParagraph;
+      }
+      showParagraphsOnFooter();
+    </script>
+  </body>
+</html>
