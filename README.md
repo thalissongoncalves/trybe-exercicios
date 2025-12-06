@@ -28,3 +28,15 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 - [✅] 3-4: _Objetos_
 - [✅] 3-5: _JSON e dia de prática_
 - [  ] 3-6: _Projeto Supermercado Pirilampo_
+
+##### Seção 4: JavaScript: DOM, Eventos e Web Storage
+
+- [✅] 4-1: _DOM e Seletores_
+- [  ] 4-2: _Trabalhando com elementos_
+- [  ] 4-3: _Eventos_
+- [  ] 4-4: _Web Storage_
+- [  ] 4-5: _Projeto Arte com Pixels_
+- [  ] 4-6: _Projeto Lista de Tarefas_
+- [  ] 4-7: _Projeto Meme Generator_
+- [  ] 4-8: _Projeto Adivinhe a Cor_
+- [  ] 4-9: _Projeto Carta Misteriosa_
