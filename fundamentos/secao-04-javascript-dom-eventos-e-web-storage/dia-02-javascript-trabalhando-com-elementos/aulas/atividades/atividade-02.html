@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="paiDoPai">
+      <section id="pai">
+        <section id="primeiroFilho"></section>
+        <section id="elementoOndeVoceEsta">
+          <section id="primeiroFilhoDoFilho"></section>
+          <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+        Atenção!
+        <section id="terceiroFilho"></section>
+        <section id="quartoEUltimoFilho"></section>
+      </section>
+    </main>
+  </body>
+  <script>
+    // Crie um irmão para elementoOndeVoceEsta.
+    const whereAreYou = document.getElementById("elementoOndeVoceEsta");
+    const whereAreYouBrother = document.createElement("section");
+    whereAreYouBrother.id = "elementoOndeVoceEsta";
+    const parent = document.getElementById("pai");
+    parent.appendChild(whereAreYouBrother);
+    // Crie um filho para elementoOndeVoceEsta.
+    const whereAreYouBrotherChild = document.createElement("section");
+    whereAreYouBrotherChild.id = "primeiroFilhoDoFilho";
+    whereAreYouBrother.appendChild(whereAreYouBrotherChild);
+    // Crie um filho para primeiroFilhoDoFilho.
+    const firstChildOfChild = document.createElement("p");
+    firstChildOfChild.innerText = "Criado um filho para primeiroFilhoDoFilho.";
+    firstChildOfChild.id = "firstChildOfChild";
+    whereAreYouBrotherChild.appendChild(firstChildOfChild);
+    // A partir desse filho criado, acesse terceiroFilho.
+    const thirdChildren = firstChildOfChild.parentNode.parentNode.previousElementSibling.previousElementSibling;
+    console.log(thirdChildren);
+  </script>
+</html>
