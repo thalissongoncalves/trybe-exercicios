@@ -1,0 +1,33 @@
+"docker images" = Visualiza todas as imagens docker que já estão presentes na máquina.
+
+"docker ps" OU "docker container ls" = Lista todos os containers em execução neste momento na máquina.
+
+"docker container ls -a" = Lista todos os containers atuais, tanto quanto em execução e também parados.
+
+"docker container run alpine:3.14 echo 'Hello World'" = Executa um container usando a imagem docker alpine e a tag 3.14.
+
+"docker container run --name meu-container alpine3:14 echo 'Hello World2'" = Executa um container usando a imagem docker alpine e a tag 3.14 já definindo um nome pro container como 'meu-container'.
+
+"docker rm <nome-container>" = Remove um container (Ele precisa estar parado).
+
+"docker container run --rm alpine:3.14 echo 'Hello World'" = Cria o container porém já o remove ao terminar a execução.
+
+"docker container run --rm -d alpine:3.14 sleep 300" = Cria o container definindo-o em segundo plano por 300 seg. (5 minutos).
+
+"docker stop -t 0 <nome-container>" = Faz o container parar sua execução.
+
+"docker exec -it meu-container sh" = Acessa o terminal do container e executa o comando 'sh'.
+
+"docker container run --rm -d --name meu-container alpine:3.14 sleep 300" = Cria um container adicionando o auto-remove e executando-o em segundo plano, adicionando o nome meu-container com a imagem alpine:3.14 ficando em segundo plano por 300 seg.
+
+"docker logs meu-container" = Ver informações do container sem precisar entrar nele
+
+"docker top meu-container" = exibe os processos que estão rodando dentro do container
+
+"docker container prune" = remove todos os containers inativos do seu computador
+
+"docker container ps -l" = retorna o último container da lista
+
+"docker container start <containerID>" = inicia a execução do container referente ao id mencionado
+
+"docker container --rm -f" = força a remoção de um container mesmo que esteja em execução
