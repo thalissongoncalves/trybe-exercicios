@@ -105,6 +105,10 @@
       // 10. Adicione a classe title na tag h1 criada;
       title.className = "title";
       // 11. Adicione a classe description nas 3 tags h3 criadas;
+      const titlesH3 = document.getElementsByTagName("h3");
+      for (index = 0; index < titlesH3.length; index += 1) {
+        titlesH3[index].className = "description";
+      };
       // 12. Remova a section criada no passo 5 (aquela que possui a classe left-content) por meio da função .removeChild();
       // 13. Centralize a section criada no passo 6 (aquela que possui a classe right-content).
       // 14. Troque a cor de fundo do elemento-pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
