@@ -1,0 +1,6 @@
+"docker pull alpine:3.14" = obtém a imagem Docker diretamente do Registry e deixa no computador sem precisar criar container.
+
+"docker rmi <IMAGE ID>" = remove a imagem do computador.
+
+"docker system prune -af" = remove todas as imagens e containers existentes no computador.
+
