@@ -1,0 +1,12 @@
+{
+  "name": "project-supermercado-pirilampo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": ".mjs",
+  "main": "1-unique-products-amount.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
