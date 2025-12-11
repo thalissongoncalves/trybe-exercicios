@@ -42,6 +42,13 @@ h3Element.addEventListener("dblclick", (e) => {
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo.
+h3Element.addEventListener("mouseover", (e) => {
+  e.target.style.color = "#2fc18c";
+})
+
+h3Element.addEventListener("mouseout", (e) => {
+  e.target.style.color = "white";
+})
 
 // Segue abaixo um exemplo de uso do event.target.
 
