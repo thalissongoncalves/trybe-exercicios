@@ -4,3 +4,11 @@
 
 "docker system prune -af" = remove todas as imagens e containers existentes no computador.
 
+"docker build <flags> -t <nome-da-imagem> <contexto>" = 
+- Uma flag -t, que indicará qual será o nome da imagem, e também a tag, se utilizar o formato <nome>:<tag>;
+- Um contexto, ou seja, em qual caminho de pasta o Docker deve se basear para processar o arquivo Dockerfile.
+Normalmente utilizamos apenas . (ponto final), que indica a pasta atual.
+
+"docker container list" = Para verificar em quais portas os seus containers estão executando e verificar a coluna PORTS.
+
+"docker port <nome_ou_id_do_container>" = Para verificar a porta específica de um container.
