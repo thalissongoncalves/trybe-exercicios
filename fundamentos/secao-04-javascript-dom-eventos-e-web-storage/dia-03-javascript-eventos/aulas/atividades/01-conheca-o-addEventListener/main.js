@@ -9,17 +9,19 @@ const myWebpage = document.getElementById("my-spotrybefy");
 // Resposta: Ocorre por que tem o seguinte atributo css definido nele: "transform: translateY(-20px)";
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando este for clicado.
+// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como é possível fazer isso? Dica: Lembre-se do método `.classList.remove`.
 const liElement = document.getElementsByTagName("li");
 
-const techLi = (e) => {
-  e.target.className = "tech";
-};
-
 for (index = 0; index < liElement.length; index += 1) {
-  liElement[index].addEventListener("click", techLi);
+  liElement[index].addEventListener("click", (e) => {
+    e.target.className = "tech";
+    for (index2 = 0; index2 < liElement.length; index2 += 1) {
+      if (liElement[index2].id !== e.target.id) {
+        liElement[index2].classList.remove(["tech"]);
+      }
+    }
+  });
 }
-
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como é possível fazer isso? Dica: Lembre-se do método `.classList.remove`.
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech'.
