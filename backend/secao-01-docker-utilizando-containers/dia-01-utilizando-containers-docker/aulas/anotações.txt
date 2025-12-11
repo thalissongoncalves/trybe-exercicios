@@ -30,4 +30,4 @@
 
 "docker container start <containerID>" = inicia a execução do container referente ao id mencionado
 
-"docker container --rm -f" = força a remoção de um container mesmo que esteja em execução
+"docker container rm -f" = força a remoção de um container mesmo que esteja em execução
