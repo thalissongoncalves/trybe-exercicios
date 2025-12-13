@@ -73,7 +73,7 @@ unless-stopped: define que o container sempre será reiniciado, a menos que util
 
 <!-- Anota aí 🖊: A ideia de variáveis de ambiente é trazer mais dinamismo entre ambientes. Por exemplo: Na maioria das empresas, usualmente temos o ambiente de teste e o ambiente de produção, esses dois ambientes possuem nome de pessoa usuária e senha diferentes para cada ambiente. Deixar esses dados fixos ou expostos no código, engessaria a aplicação e seria inseguro. As variáveis de ambiente entram para reduzir esse problema. Tendo variáveis com o mesmo nome em cada ambiente, por exemplo DB_USER e DB_PASSWORD. Em cada ambiente a aplicação consegue se conectar em banco de dados diferentes, isolando assim o ambiente de teste e o de produção. -->
 
-docker-compose down: desce todos os serviços
+docker compose down: desce todos os serviços
 
 docker network create --driver bridge rede-local: cria uma rede com o driver de 'bridge' com o nome 'rede-local'
 
