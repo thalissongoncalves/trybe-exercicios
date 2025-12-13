@@ -40,3 +40,12 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 - [  ] 4-7: _Projeto Meme Generator_
 - [  ] 4-8: _Projeto Adivinhe a Cor_
 - [  ] 4-9: _Projeto Carta Misteriosa_
+
+## Back-end ✅
+
+##### Seção 1: Docker - Utilizando Containers
+
+- [✅] 1-1: _Utilizando Containers - Docker_
+- [✅] 1-2: _Manipulando Imagens no Docker_
+- [✅] 1-3: _Orquestrando Containers com Docker_
+- [  ] 1-4: _Projeto - Docker To do List_
