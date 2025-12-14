@@ -118,3 +118,29 @@ const taskSelect = () => {
 };
 
 taskSelect();
+
+const changeDayColor = () => {
+  const tasks = document.querySelectorAll(".task");
+  const days = document.querySelectorAll(".day");
+  let color = "";
+  for (index = 0; index < tasks.length; index += 1) {
+    tasks[index].addEventListener("click", (e) => {
+      color = e.target.style.backgroundColor;
+    });
+  }
+  for (index2 = 0; index2 < days.length; index2 += 1) {
+    days[index2].addEventListener("click", (e) => {
+      if (
+        e.target.style.color === "rgb(119,119,119)" ||
+        e.target.style.color === "#777" ||
+        e.target.style.color === ""
+      ) {
+        e.target.style.color = color;
+      } else {
+        e.target.style.color = "";
+      }
+    });
+  }
+};
+
+changeDayColor();
