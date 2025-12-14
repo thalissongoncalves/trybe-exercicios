@@ -52,3 +52,19 @@ const addDay = (array) => {
 };
 
 addDay(decemberDaysList);
+
+const btnHoliday = document.querySelector("#btn-holiday");
+btnHoliday.addEventListener("click", (e) => {
+  const holidays = document.querySelectorAll(".holiday");
+  for (index = 0; index < holidays.length; index += 1) {
+    if (holidays[index].classList.contains("activate")) {
+      holidays[index].classList.remove("activate");
+      holidays[index].style.backgroundColor = "rgb(238,238,238)";
+      holidays[index].style.color = "#777";
+    } else {
+      holidays[index].classList.add("activate");
+      holidays[index].style.backgroundColor = "green";
+      holidays[index].style.color = "white";
+    }
+  }
+})
