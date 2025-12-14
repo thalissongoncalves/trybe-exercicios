@@ -10,3 +10,7 @@ docker container start 01container
 
 docker ps -f name=01container
 
+<!-- 4. Execute o comando cat /etc/os-release no container 01container sem se acoplar a ele -->
+
+docker exec -i 01container sh -c "cat /etc/os-release"
+
