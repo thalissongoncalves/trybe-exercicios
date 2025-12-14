@@ -14,3 +14,7 @@ docker ps -f name=01container
 
 docker exec -i 01container sh -c "cat /etc/os-release"
 
+<!-- 5. Remova o container 01container -->
+
+docker container rm -f 01container
+
