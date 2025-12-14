@@ -18,3 +18,7 @@ docker exec -i 01container sh -c "cat /etc/os-release"
 
 docker container rm -f 01container
 
+<!-- 6. Faça o download da imagem nginx com a versão 1.21.3-alpine sem criar ou rodar um container -->
+
+docker image pull nginx:1.21.3-alpine
+
