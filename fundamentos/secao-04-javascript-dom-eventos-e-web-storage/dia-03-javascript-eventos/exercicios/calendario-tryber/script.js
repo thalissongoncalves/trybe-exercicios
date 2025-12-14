@@ -103,3 +103,18 @@ const zoomOff = () => {
 
 zoomOn();
 zoomOff();
+
+const taskSelect = () => {
+  const tasks = document.querySelectorAll(".task");
+  for (index = 0; index < tasks.length; index += 1) {
+    tasks[index].addEventListener("click", (e) => {
+      if (e.target.classList.contains("selected")) {
+        e.target.classList.remove("selected");
+      } else {
+        e.target.classList.add("selected");
+      }
+    });
+  }
+};
+
+taskSelect();
