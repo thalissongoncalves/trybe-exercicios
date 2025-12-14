@@ -67,4 +67,19 @@ btnHoliday.addEventListener("click", (e) => {
       holidays[index].style.color = "white";
     }
   }
+});
+
+const btnFriday = document.querySelector("#btn-friday");
+btnFriday.addEventListener("click", (e) => {
+  const fridays = document.querySelectorAll(".friday");
+  for (index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].classList.contains("fridayActivate")) {
+      const friday = fridays[index].innerText;
+      fridays[index].classList.remove("fridayActivate");
+      fridays[index].innerText = friday.replace(/friday/g, "");
+    } else {
+      fridays[index].classList.add("fridayActivate");
+      fridays[index].innerText = `friday${fridays[index].innerText}`
+    }
+  }
 })
