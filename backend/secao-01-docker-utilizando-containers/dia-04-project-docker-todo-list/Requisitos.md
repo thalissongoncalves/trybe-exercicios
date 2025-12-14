@@ -22,3 +22,7 @@ docker container rm -f 01container
 
 docker image pull nginx:1.21.3-alpine
 
+<!-- 7. Rode um novo container com a imagem nginx com a versão 1.21.3-alpine em segundo plano nomeando-o como 02images e mapeando sua porta padrão de acesso para porta 3000 do sistema hospedeiro -->
+
+docker run -d --name 02images -p 3000:80 nginx:1.21.3-alpine
+
