@@ -26,3 +26,7 @@ docker image pull nginx:1.21.3-alpine
 
 docker run -d --name 02images -p 3000:80 nginx:1.21.3-alpine
 
+<!-- 8. Pare o container 02images que está em andamento -->
+
+docker stop -t 0 02images
+
