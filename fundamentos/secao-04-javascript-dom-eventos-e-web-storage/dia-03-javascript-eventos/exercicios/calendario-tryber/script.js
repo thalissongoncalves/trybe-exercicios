@@ -79,7 +79,27 @@ btnFriday.addEventListener("click", (e) => {
       fridays[index].innerText = friday.replace(/friday/g, "");
     } else {
       fridays[index].classList.add("fridayActivate");
-      fridays[index].innerText = `friday${fridays[index].innerText}`
+      fridays[index].innerText = `friday${fridays[index].innerText}`;
     }
   }
-})
+});
+
+const zoomOn = () => {
+  const dayElements = document.querySelectorAll(".day");
+  for (index = 0; index < dayElements.length; index += 1) {
+    dayElements[index].addEventListener("mouseover", (e) => {
+      e.target.style.fontSize = "30px";
+    });
+  }
+};
+const zoomOff = () => {
+  const dayElements = document.querySelectorAll(".day");
+  for (index = 0; index < dayElements.length; index += 1) {
+    dayElements[index].addEventListener("mouseout", (e) => {
+      e.target.style.fontSize = "20px";
+    });
+  }
+};
+
+zoomOn();
+zoomOff();
