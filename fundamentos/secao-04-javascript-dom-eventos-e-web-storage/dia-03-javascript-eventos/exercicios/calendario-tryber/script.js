@@ -144,3 +144,35 @@ const changeDayColor = () => {
 };
 
 changeDayColor();
+
+const addTask = () => {
+  const inputElement = document.querySelector("#task-input");
+  const btnInput = document.querySelector("#btn-add");
+  const taskList = document.querySelector("#task-list");
+  let inputValue = "";
+  inputElement.addEventListener("input", (e) => {
+    inputValue = e.target.value;
+  });
+  inputElement.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (inputValue) {
+        const taskElement = document.createElement("li");
+        taskElement.innerText = inputValue;
+        taskList.appendChild(taskElement);
+      } else {
+        return alert("Nenhuma tarefa foi inserida no campo de texto.");
+      }
+    }
+  });
+  btnInput.addEventListener("click", (e) => {
+    if (inputValue) {
+      const taskElement = document.createElement("li");
+      taskElement.innerText = inputValue;
+      taskList.appendChild(taskElement);
+    } else {
+      return alert("Nenhuma tarefa foi inserida no campo de texto.");
+    }
+  });
+};
+
+addTask();
