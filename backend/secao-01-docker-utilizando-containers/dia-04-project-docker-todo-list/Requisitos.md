@@ -42,3 +42,6 @@ docker build -t todofrontend ./todo-app/front-end
 
 docker build -t todotests ./todo-app/tests
 
+<!-- 12. Suba uma orquestração em segundo plano com o docker-compose de forma que backend, frontend e tests consigam se comunicar -->
+
+docker-compose up -d --build
