@@ -34,36 +34,11 @@ docker stop -t 0 02images
 
 docker build -t todobackend ./todo-app/back-end
 
-Dockerfile:
-FROM node:16-alpine
-EXPOSE 3001
-WORKDIR /app/back-end
-ADD node_modules.tar.gz /app/back-end
-COPY . .
-ENTRYPOINT ["npm"]
-CMD ["start"]
-
 <!-- 10. Gere uma build a partir do Dockerfile do front-end do todo-app nomeando a imagem para todofrontend -->
 
 docker build -t todofrontend ./todo-app/front-end
-
-Dockerfile:
-FROM node:16-alpine
-EXPOSE 3000
-WORKDIR /app/front-end
-ADD node_modules.tar.gz /app/front-end
-COPY . .
-ENTRYPOINT ["npm"]
-CMD ["start"]
 
 <!-- 11. Gere uma build a partir do Dockerfile dos testes do todo-app nomeando a imagem para todotests -->
 
 docker build -t todotests ./todo-app/tests
 
-Dockerfile:
-FROM betrybe/puppetter:1.0
-WORKDIR /app/tests
-ADD node_modules.tar.gz /app/tests
-COPY . .
-ENTRYPOINT ["npm"]
-CMD ["test"]
