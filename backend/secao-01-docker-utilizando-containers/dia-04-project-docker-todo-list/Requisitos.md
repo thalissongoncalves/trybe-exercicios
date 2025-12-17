@@ -30,3 +30,16 @@ docker run -d --name 02images -p 3000:80 nginx:1.21.3-alpine
 
 docker stop -t 0 02images
 
+<!-- 9. Gere uma build a partir do Dockerfile do back-end do todo-app nomeando a imagem para todobackend -->
+
+docker build -t todobackend ./todo-app/back-end
+
+Dockerfile:
+FROM node:16-alpine
+EXPOSE 3001
+WORKDIR /app/back-end
+ADD node_modules.tar.gz /app/back-end
+COPY . .
+ENTRYPOINT ["npm"]
+CMD ["start"]
+
