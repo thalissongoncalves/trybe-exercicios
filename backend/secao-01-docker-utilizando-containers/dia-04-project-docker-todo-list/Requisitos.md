@@ -56,3 +56,14 @@ COPY . .
 ENTRYPOINT ["npm"]
 CMD ["start"]
 
+<!-- 11. Gere uma build a partir do Dockerfile dos testes do todo-app nomeando a imagem para todotests -->
+
+docker build -t todotests ./todo-app/tests
+
+Dockerfile:
+FROM betrybe/puppetter:1.0
+WORKDIR /app/tests
+ADD node_modules.tar.gz /app/tests
+COPY . .
+ENTRYPOINT ["npm"]
+CMD ["test"]
