@@ -10,6 +10,7 @@ window.onload = () => {
     for (let index = 0; index < paragraphs.length; index += 1) {
       paragraphs[index].style.color = color
     }
+    localStorage.setItem('color', color);
   }
 
   const setFontSize = (size) => {
