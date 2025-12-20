@@ -1,9 +1,15 @@
 window.onload = () => {
   const setBackgroundColor = (color) => {
     let content = document.querySelector(".content");
+    if (color !== "") {
+      content.style.backgroundColor = color;
+      localStorage.setItem("backgroundColor", color);
+    }
     content.style.backgroundColor = color;
     localStorage.setItem("backgroundColor", color);
   };
+  let backgroundColorStorage = localStorage.getItem("backgroundColor");
+  setBackgroundColor(backgroundColorStorage);
 
   const setFontColor = (color) => {
     let paragraphs = document.querySelectorAll(".paragraph");
@@ -12,6 +18,8 @@ window.onload = () => {
     }
     localStorage.setItem("color", color);
   };
+  let fontColorStorage = localStorage.getItem("color");
+  setFontColor(fontColorStorage);
 
   const setFontSize = (size) => {
     let paragraphs = document.querySelectorAll(".paragraph");
@@ -20,6 +28,8 @@ window.onload = () => {
     }
     localStorage.setItem("fontSize", size);
   };
+  let fontSizeStorage = localStorage.getItem("fontSize");
+  setFontSize(fontSizeStorage);
 
   const setLineHeight = (height) => {
     let paragraphs = document.querySelectorAll(".paragraph");
@@ -28,6 +38,8 @@ window.onload = () => {
     }
     localStorage.setItem("lineHeight", height);
   };
+  let lineHeightStorage = localStorage.getItem("lineHeight");
+  setLineHeight(lineHeightStorage);
 
   const setFontFamily = (family) => {
     let paragraphs = document.querySelectorAll(".paragraph");
@@ -36,6 +48,8 @@ window.onload = () => {
     }
     localStorage.setItem("fontFamily", family);
   };
+  let fontFamilyStorage = localStorage.getItem("fontFamily");
+  setFontFamily(fontFamilyStorage);
 
   // Cor de fundo da tela;
   let backgroundColorButtons = document.querySelectorAll(
