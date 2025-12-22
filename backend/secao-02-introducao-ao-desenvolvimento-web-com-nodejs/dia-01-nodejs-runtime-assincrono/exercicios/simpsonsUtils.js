@@ -25,6 +25,26 @@ async function findSimpsonsForId(id) {
       }
     }
   } catch (err) {
-    console.error(`ID não encontrado.`)
+    console.error(`ID não encontrado.`);
   }
 }
+
+async function deleteSimpsonsForIdTenAndSix() {
+  try {
+    const data = await fs.readFile(path.resolve(__dirname, SIMPSONS_DATA_PATH));
+    const simpsons = JSON.parse(data);
+    for (i = 0; i < simpsons.length; i += 1) {
+      if (simpsons[i].id == 10 || simpsons[i].id == 6) {
+        simpsons.splice(i, 1);
+      }
+    }
+    await fs.writeFile(
+      path.resolve(__dirname, SIMPSONS_DATA_PATH),
+      JSON.stringify(simpsons)
+    );
+  } catch (err) {
+    console.error(`ID não encontrado.`);
+  }
+}
+
+deleteSimpsonsForIdTenAndSix();
