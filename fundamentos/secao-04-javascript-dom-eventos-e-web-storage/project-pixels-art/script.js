@@ -16,5 +16,9 @@ function mudarCorAleatoria(element) {
 }
 
 for (i = 0; i < colorPallets.length; i += 1) {
-  mudarCorAleatoria(colorPallets[i]);
+  if (i == 0) {
+    colorPallets[0].style.backgroundColor = "black";
+  } else {
+    mudarCorAleatoria(colorPallets[i]);
+  }
 }
