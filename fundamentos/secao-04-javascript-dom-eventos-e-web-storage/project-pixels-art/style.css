@@ -17,3 +17,17 @@ body {
   height: 5em;
   padding: 10px;
 }
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: auto;
+  max-width: 50em;
+  padding: 25px;
+}
+
+.pixel {
+  border: black 1px solid;
+  height: 5em;
+  padding: 10px;
+}

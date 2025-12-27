@@ -1,6 +1,7 @@
 const colorPallets = document.getElementsByClassName('color');
 const buttonRandomColor = document.getElementById('button-random-color');
 const colorPaletteStorage = localStorage.getItem('colorPalette');
+const pixelBoardElement = document.getElementById('pixel-board');
 
 function mudarCorAleatoria(element) {
   let r = Math.floor(Math.random() * 256);
@@ -57,4 +58,11 @@ if (!colorPaletteStorage) {
       colorPallets[i].style.backgroundColor = colors[i];
     }
   }
+}
+
+for (i = 0; i < 25; i += 1) {
+  const pixel = document.createElement("div");
+  pixel.className = "pixel";
+  pixel.style.backgroundColor = "white";
+  pixelBoardElement.appendChild(pixel);
 }
