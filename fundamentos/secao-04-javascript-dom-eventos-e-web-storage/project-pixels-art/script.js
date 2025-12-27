@@ -3,6 +3,8 @@ const buttonRandomColor = document.getElementById('button-random-color');
 const colorPaletteStorage = localStorage.getItem('colorPalette');
 const pixelBoardElement = document.getElementById('pixel-board');
 
+colorPallets[0].classList.add("selected");
+
 function mudarCorAleatoria(element) {
   let r = Math.floor(Math.random() * 256);
   let g = Math.floor(Math.random() * 256);
@@ -26,6 +28,7 @@ function changeColors() {
   for (i = 0; i < colorPallets.length; i += 1) {
     if (i == 0) {
       colorPallets[0].style.backgroundColor = 'black';
+      colorPallets[0].classList.add("selected")
       colors.push('black');
     } else {
       const colorResult = mudarCorAleatoria(colorPallets[i], i);
