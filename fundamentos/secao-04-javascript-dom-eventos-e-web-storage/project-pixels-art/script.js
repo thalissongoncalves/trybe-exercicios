@@ -3,6 +3,8 @@ const buttonRandomColor = document.getElementById('button-random-color');
 const colorPaletteStorage = localStorage.getItem('colorPalette');
 const pixelBoardElement = document.getElementById('pixel-board');
 
+localStorage.setItem('colorSelected', 'black');
+
 colorPallets[0].classList.add('selected');
 
 function mudarCorAleatoria(element) {
@@ -41,7 +43,7 @@ function changeColors() {
 
 function cleanSelected() {
   for (i = 0; i < colorPallets.length; i += 1) {
-    colorPallets[i].classList.remove("selected");
+    colorPallets[i].classList.remove('selected');
   }
 }
 
@@ -79,6 +81,16 @@ for (i = 0; i < 25; i += 1) {
 for (i = 0; i < colorPallets.length; i += 1) {
   colorPallets[i].addEventListener('click', (e) => {
     cleanSelected();
-    e.target.classList.add("selected");
+    e.target.classList.add('selected');
+    localStorage.setItem('colorSelected', e.target.style.backgroundColor);
+  });
+}
+
+const pixelElements = document.getElementsByClassName('pixel');
+
+for (i = 0; i < pixelElements.length; i += 1) {
+  pixelElements[i].addEventListener('click', (e) => {
+    const colorSelected = localStorage.getItem("colorSelected");
+    e.target.style.backgroundColor = colorSelected;
   });
 }
