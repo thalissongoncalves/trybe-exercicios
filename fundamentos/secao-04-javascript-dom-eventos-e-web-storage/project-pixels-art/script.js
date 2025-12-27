@@ -1,4 +1,5 @@
 const colorPallets = document.getElementsByClassName('color');
+const buttonRandomColor = document.getElementById('button-random-color');
 
 function mudarCorAleatoria(element) {
   let r = Math.floor(Math.random() * 256);
@@ -22,3 +23,13 @@ for (i = 0; i < colorPallets.length; i += 1) {
     mudarCorAleatoria(colorPallets[i]);
   }
 }
+
+buttonRandomColor.addEventListener('click', () => {
+  for (i = 0; i < colorPallets.length; i += 1) {
+    if (i == 0) {
+      colorPallets[0].style.backgroundColor = 'black';
+    } else {
+      mudarCorAleatoria(colorPallets[i]);
+    }
+  }
+});
