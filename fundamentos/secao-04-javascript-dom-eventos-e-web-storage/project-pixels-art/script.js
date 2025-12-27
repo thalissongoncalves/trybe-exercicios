@@ -3,10 +3,13 @@ const buttonRandomColor = document.getElementById('button-random-color');
 const colorPaletteStorage = localStorage.getItem('colorPalette');
 const pixelBoardElement = document.getElementById('pixel-board');
 const clearBtn = document.getElementById('clear-board');
+const pixelBoardElementsStorage = JSON.parse(
+  localStorage.getItem('pixelBoard')
+);
 
 localStorage.setItem('colorSelected', 'black');
-
 colorPallets[0].classList.add('selected');
+const pixelElementsArray = [];
 
 function mudarCorAleatoria(element) {
   let r = Math.floor(Math.random() * 256);
@@ -72,12 +75,27 @@ if (!colorPaletteStorage) {
   }
 }
 
-for (i = 0; i < 25; i += 1) {
-  const pixel = document.createElement('div');
-  pixel.className = 'pixel';
-  pixel.style.backgroundColor = 'white';
-  pixelBoardElement.appendChild(pixel);
+if (!pixelBoardElementsStorage) {
+  for (i = 0; i < 25; i += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'white';
+    pixel.dataset.index = i;
+    pixelBoardElement.appendChild(pixel);
+    pixelElementsArray.push(pixel.style.backgroundColor);
+  }
+} else {
+  for (i = 0; i < pixelBoardElementsStorage.length; i += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = pixelBoardElementsStorage[i];
+    pixel.dataset.index = i;
+    pixelBoardElement.appendChild(pixel);
+    pixelElementsArray.push(pixel.style.backgroundColor);
+  }
 }
+
+localStorage.setItem('pixelBoard', JSON.stringify(pixelElementsArray));
 
 for (i = 0; i < colorPallets.length; i += 1) {
   colorPallets[i].addEventListener('click', (e) => {
@@ -92,12 +110,15 @@ const pixelElements = document.getElementsByClassName('pixel');
 for (i = 0; i < pixelElements.length; i += 1) {
   pixelElements[i].addEventListener('click', (e) => {
     const colorSelected = localStorage.getItem('colorSelected');
+    const pixelBoardElements = JSON.parse(localStorage.getItem('pixelBoard'));
     e.target.style.backgroundColor = colorSelected;
+    pixelBoardElements[e.target.dataset.index] = colorSelected;
+    localStorage.setItem('pixelBoard', JSON.stringify(pixelBoardElements));
   });
 }
 
 clearBtn.addEventListener('click', () => {
   for (i = 0; i < pixelElements.length; i += 1) {
-    pixelElements[i].style.backgroundColor = "white";
-  };
+    pixelElements[i].style.backgroundColor = 'white';
+  }
 });
