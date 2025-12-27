@@ -2,6 +2,7 @@ const colorPallets = document.getElementsByClassName('color');
 const buttonRandomColor = document.getElementById('button-random-color');
 const colorPaletteStorage = localStorage.getItem('colorPalette');
 const pixelBoardElement = document.getElementById('pixel-board');
+const clearBtn = document.getElementById('clear-board');
 
 localStorage.setItem('colorSelected', 'black');
 
@@ -90,7 +91,13 @@ const pixelElements = document.getElementsByClassName('pixel');
 
 for (i = 0; i < pixelElements.length; i += 1) {
   pixelElements[i].addEventListener('click', (e) => {
-    const colorSelected = localStorage.getItem("colorSelected");
+    const colorSelected = localStorage.getItem('colorSelected');
     e.target.style.backgroundColor = colorSelected;
   });
 }
+
+clearBtn.addEventListener('click', () => {
+  for (i = 0; i < pixelElements.length; i += 1) {
+    pixelElements[i].style.backgroundColor = "white";
+  };
+});
