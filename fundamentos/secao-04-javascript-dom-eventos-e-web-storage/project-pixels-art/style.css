@@ -19,15 +19,17 @@ body {
 }
 
 #pixel-board {
+  align-items: center;
+  align-content: center;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  margin: auto;
-  max-width: 50em;
+  justify-content: center;
   padding: 25px;
 }
 
 .pixel {
   border: black 1px solid;
-  height: 5em;
+  height: 40px;
   padding: 10px;
+  width: 40px;
 }
