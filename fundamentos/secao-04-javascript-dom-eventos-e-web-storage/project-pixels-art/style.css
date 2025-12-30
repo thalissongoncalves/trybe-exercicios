@@ -1,16 +1,9 @@
-body {
-  background-color: rgb(255, 255, 255);
-  margin: auto;
-  padding: 0;
-  text-align: center;
-}
-
-#color-palette {
+/* #color-palette {
   display: grid;
   grid-template-columns: auto auto auto auto;
   margin: auto;
   width: 30em;
-}
+} */
 
 .color {
   border: black 1px solid;
