@@ -6,10 +6,23 @@ const clearBtn = document.getElementById('clear-board');
 const pixelBoardElementsStorage = JSON.parse(
   localStorage.getItem('pixelBoard')
 );
+const gridColumnsStorage = localStorage.getItem('gridColumns');
+const setPixelBtn = document.getElementById('generate-board');
+const setPixelInput = document.getElementById('board-size');
+let pixelsElementsDefault = 25;
+
+if (!gridColumnsStorage) {
+  localStorage.setItem('gridColumns', 'auto auto auto auto auto');
+  pixelBoardElement.style.gridTemplateColumns =
+    localStorage.getItem('gridColumns');
+} else {
+  pixelBoardElement.style.gridTemplateColumns =
+    localStorage.getItem('gridColumns');
+}
 
 localStorage.setItem('colorSelected', 'black');
 colorPallets[0].classList.add('selected');
-const pixelElementsArray = [];
+let pixelElementsArray = [];
 
 function mudarCorAleatoria(element) {
   let r = Math.floor(Math.random() * 256);
@@ -121,4 +134,37 @@ clearBtn.addEventListener('click', () => {
   for (i = 0; i < pixelElements.length; i += 1) {
     pixelElements[i].style.backgroundColor = 'white';
   }
+});
+
+setPixelBtn.addEventListener('click', () => {
+  if (!setPixelInput.value) {
+    alert('Board inválido!');
+  }
+
+  pixelsElementsDefault = setPixelInput.value * setPixelInput.value;
+
+  pixelElementsArray = [];
+
+  while (pixelBoardElement.firstChild) {
+    pixelBoardElement.removeChild(pixelBoardElement.firstChild);
+  }
+
+  for (index02 = 0; index02 < pixelsElementsDefault; index02 += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'white';
+    pixel.dataset.index = index02;
+    pixelBoardElement.appendChild(pixel);
+    pixelElementsArray.push(pixel.style.backgroundColor);
+  }
+
+  let gridTemplateColumns = '';
+
+  for (index03 = 0; index03 < setPixelInput.value; index03 += 1) {
+    gridTemplateColumns += 'auto ';
+  }
+
+  pixelBoardElement.style.gridTemplateColumns = gridTemplateColumns;
+  localStorage.setItem('pixelBoard', JSON.stringify(pixelElementsArray));
+  localStorage.setItem('gridColumns', gridTemplateColumns);
 });
