@@ -141,6 +141,12 @@ setPixelBtn.addEventListener('click', () => {
     alert('Board inválido!');
   }
 
+  if (setPixelInput.value < 5) {
+    setPixelInput.value = 5;
+  } else if (setPixelInput.value > 50) {
+    setPixelInput.value = 50;
+  }
+
   pixelsElementsDefault = setPixelInput.value * setPixelInput.value;
 
   pixelElementsArray = [];
