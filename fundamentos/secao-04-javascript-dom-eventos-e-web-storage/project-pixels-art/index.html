@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixels Art</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <h1 id="title">Paleta de Cores</h1>
+    <div id="color-palette">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </div>
+    <button id="button-random-color">Cores aleatórias</button>
+    <br>
+    <label>
+      <input id="board-size" type="number" min="1" />
+      <button id="generate-board" type="button">VQV</button>
+      <button id="clear-board">Limpar</button>
+    </label>
+    <div id="pixel-board"></div>
+    <p>
+      Clique nas cores para selecionar • Clique nos pixels para pintar
+    </p>
+  </body>
+  <script src="script.js"></script>
+</html>
