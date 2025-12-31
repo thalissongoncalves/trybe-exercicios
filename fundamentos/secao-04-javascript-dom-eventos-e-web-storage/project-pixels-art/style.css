@@ -1,9 +1,24 @@
-/* #color-palette {
+body {
+  margin: auto;
+  text-align: center;
+}
+
+#color-palette {
   display: grid;
   grid-template-columns: auto auto auto auto;
   margin: auto;
   width: 30em;
-} */
+}
+
+#title {
+  background: linear-gradient(135deg, hsl(280 70% 60%), hsl(320 70% 55%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: none;
+}
 
 .color {
   border: black 1px solid;
