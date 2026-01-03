@@ -35,7 +35,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 - [✅] 4-2: _Trabalhando com elementos_
 - [✅] 4-3: _Eventos_
 - [✅] 4-4: _Web Storage_
-- [  ] 4-5: _Projeto Arte com Pixels_
+- [✅] 4-5: _Projeto Arte com Pixels_
 - [  ] 4-6: _Projeto Lista de Tarefas_
 - [  ] 4-7: _Projeto Meme Generator_
 - [  ] 4-8: _Projeto Adivinhe a Cor_
