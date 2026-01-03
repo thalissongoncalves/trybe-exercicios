@@ -38,6 +38,7 @@
 
     --radius: 0.75rem;
 
+    /* Custom design tokens */
     --gradient-primary: linear-gradient(
       135deg,
       hsl(280 70% 60%),
@@ -67,15 +68,19 @@
   body {
     font-family: "Outfit", system-ui, sans-serif;
     background: var(--gradient-surface);
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
+    min-height: 100vh;
     padding: 1rem;
     text-align: center;
   }
 
+  /* Color palette styles */
   #color-palette {
     @apply flex justify-center;
-    width: 50%;
+    gap: 30px;
+    margin: 1rem;
+    width: 100%;
   }
 
   .color {
@@ -83,6 +88,8 @@
     border: 1px solid black;
     transition: var(--transition-smooth);
     box-shadow: var(--shadow-soft);
+    width: 6rem;
+    height: 6rem;
   }
 
   .color:hover {
@@ -95,6 +102,7 @@
     box-shadow: 0 0 0 3px hsl(var(--primary)), var(--shadow-glow);
   }
 
+  /* Pixel board styles */
   #pixel-board {
     @apply grid gap-0 justify-center;
     background: hsl(var(--card));
@@ -104,8 +112,8 @@
   }
 
   .pixel {
-    width: 40px;
-    height: 40px;
+    width: 5em;
+    height: 5em;
     background-color: white;
     border: 1px solid black;
     cursor: crosshair;
@@ -118,6 +126,7 @@
     position: relative;
   }
 
+  /* Button styles */
   #button-random-color {
     @apply px-10 py-5 mb-5 rounded-2xl font-semibold;
     background: var(--gradient-primary);
@@ -166,6 +175,7 @@
     box-shadow: 0 0 20px hsl(160 70% 45% / 0.4);
   }
 
+  /* Input styles */
   #board-size {
     @apply px-4 py-3 mx-2 rounded-lg font-semibold text-center;
     background: hsl(var(--secondary));
@@ -181,6 +191,7 @@
     box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
   }
 
+  /* Title styles */
   #title {
     @apply text-4xl md:text-8xl font-bold text-center;
     background: var(--gradient-primary);
@@ -210,26 +221,26 @@
   }
 
   .color {
-    width: 44px;
-    height: 44px;
+    width: 4em;
+    height: 4em;
   }
 
   #button-random-color {
     width: 100%;
     font-size: 1.1rem;
     padding: 1rem;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
   }
 
   #clear-board,
   #generate-board {
     width: 100%;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
   }
 
   #board-size {
     width: 100%;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
   }
 
   label {
@@ -239,13 +250,21 @@
   }
 
   #pixel-board {
-    overflow-x: auto;
-    max-width: 100%;
+    display: grid;
+    max-width: 90vw;
+    margin: 1rem auto;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
   }
 
   .pixel {
-    width: 32px;
-    height: 32px;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    max-width: 2em;
+    max-height: 2em;
   }
 
   p {
