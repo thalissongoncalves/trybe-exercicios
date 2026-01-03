@@ -38,7 +38,6 @@
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
     --gradient-primary: linear-gradient(
       135deg,
       hsl(280 70% 60%),
@@ -63,22 +62,17 @@
 @layer base {
   * {
     @apply border-border;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 3rem;
-    text-align: center;
   }
 
   body {
     font-family: "Outfit", system-ui, sans-serif;
     background: var(--gradient-surface);
-    margin: auto;
-    min-height: 100vh;
-    padding: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
     text-align: center;
   }
 
-  /* Color palette styles */
   #color-palette {
     @apply flex justify-center;
     width: 50%;
@@ -101,7 +95,6 @@
     box-shadow: 0 0 0 3px hsl(var(--primary)), var(--shadow-glow);
   }
 
-  /* Pixel board styles */
   #pixel-board {
     @apply grid gap-0 justify-center;
     background: hsl(var(--card));
@@ -125,7 +118,6 @@
     position: relative;
   }
 
-  /* Button styles */
   #button-random-color {
     @apply px-10 py-5 mb-5 rounded-2xl font-semibold;
     background: var(--gradient-primary);
@@ -174,7 +166,6 @@
     box-shadow: 0 0 20px hsl(160 70% 45% / 0.4);
   }
 
-  /* Input styles */
   #board-size {
     @apply px-4 py-3 mx-2 rounded-lg font-semibold text-center;
     background: hsl(var(--secondary));
@@ -190,7 +181,6 @@
     box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
   }
 
-  /* Title styles */
   #title {
     @apply text-4xl md:text-8xl font-bold text-center;
     background: var(--gradient-primary);
@@ -204,5 +194,61 @@
   p {
     color: hsl(var(--foreground));
     padding: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  #color-palette {
+    width: 100%;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  .color {
+    width: 44px;
+    height: 44px;
+  }
+
+  #button-random-color {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  #clear-board,
+  #generate-board {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #board-size {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #pixel-board {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .pixel {
+    width: 32px;
+    height: 32px;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }

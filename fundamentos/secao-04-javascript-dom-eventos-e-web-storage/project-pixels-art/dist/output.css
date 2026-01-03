@@ -669,7 +669,6 @@ video {
   --input: 220 15% 25%;
   --ring: 280 70% 60%;
   --radius: 0.75rem;
-  /* Custom design tokens */
   --gradient-primary: linear-gradient(
       135deg,
       hsl(280 70% 60%),
@@ -692,22 +691,16 @@ video {
 
 * {
   border-color: hsl(var(--border));
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem;
-  text-align: center;
 }
 
 body {
   font-family: "Outfit", system-ui, sans-serif;
   background: var(--gradient-surface);
-  margin: auto;
-  min-height: 100vh;
-  padding: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
   text-align: center;
 }
-
-/* Color palette styles */
 
 #color-palette {
   display: flex;
@@ -735,8 +728,6 @@ body {
   box-shadow: 0 0 0 3px hsl(var(--primary)), var(--shadow-glow);
 }
 
-/* Pixel board styles */
-
 #pixel-board {
   display: grid;
   justify-content: center;
@@ -761,8 +752,6 @@ body {
   z-index: 1;
   position: relative;
 }
-
-/* Button styles */
 
 #button-random-color {
   margin-bottom: 1.25rem;
@@ -832,8 +821,6 @@ body {
   box-shadow: 0 0 20px hsl(160 70% 45% / 0.4);
 }
 
-/* Input styles */
-
 #board-size {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -856,8 +843,6 @@ body {
   border-color: hsl(var(--primary));
   box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
 }
-
-/* Title styles */
 
 #title {
   text-align: center;
@@ -889,4 +874,60 @@ p {
 
 .border {
   border-width: 1px;
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  #color-palette {
+    width: 100%;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  .color {
+    width: 44px;
+    height: 44px;
+  }
+
+  #button-random-color {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  #clear-board,
+  #generate-board {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #board-size {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #pixel-board {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .pixel {
+    width: 32px;
+    height: 32px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
